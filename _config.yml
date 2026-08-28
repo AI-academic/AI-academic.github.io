@@ -1,7 +1,7 @@
 # ---- edit these ----
 title: "Academic AI News and Updates"
 description: "A curated roundup of academic AI related news and stories, updated regularly."
-url: "https://AI-academic.github.io"
+url: "https://ai-academic.github.io"
 
 # ---- leave these alone ----
 theme: minima
