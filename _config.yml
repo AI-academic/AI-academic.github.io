@@ -1,0 +1,11 @@
+# ---- edit these ----
+title: "Academic AI News Digest"
+description: "A curated roundup of academic AI related news, updated regularly."
+url: "https://ai-mcmaster.github.io"
+
+# ---- leave these alone ----
+theme: minima
+plugins:
+  - jekyll-feed
+show_excerpts: true
+permalink: /:year/:month/:day/:title/
