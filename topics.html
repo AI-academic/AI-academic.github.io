@@ -1,0 +1,33 @@
+---
+layout: page
+title: Topics
+permalink: /topics/
+---
+
+<p>Every briefing that touched each subject, newest first.</p>
+
+{% assign topics = site.tags | sort %}
+
+{% if topics.size == 0 %}
+  <p>Nothing tagged yet.</p>
+{% else %}
+
+  <p class="post-meta">
+    {% for topic in topics %}
+      <a href="#{{ topic[0] | slugify }}">{{ topic[0] }}</a> ({{ topic[1].size }}){% unless forloop.last %} &middot; {% endunless %}
+    {% endfor %}
+  </p>
+
+  {% for topic in topics %}
+    <h2 id="{{ topic[0] | slugify }}">{{ topic[0] }}</h2>
+    <ul class="post-list">
+      {% for post in topic[1] %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
+
+{% endif %}
