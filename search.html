@@ -1,0 +1,68 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+<p>Search every news item published so far, including organization names and topic tags.
+Two or more letters; multiple words must all appear.</p>
+
+<input type="search" id="q" placeholder="e.g. McMaster, integrity, funding"
+       autocomplete="off" style="width:100%;padding:.6em;font-size:1rem;">
+
+<p id="count" class="post-meta"></p>
+<div id="results"></div>
+
+<script>
+(function () {
+  var input = document.getElementById("q");
+  var out = document.getElementById("results");
+  var count = document.getElementById("count");
+  var items = [];
+
+  fetch({{ "/search.json" | relative_url | jsonify }})
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      items = data;
+      var initial = new URLSearchParams(location.search).get("q");
+      if (initial) { input.value = initial; run(); }
+    });
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  function snippet(text, term) {
+    var i = text.toLowerCase().indexOf(term);
+    if (i === -1) { return esc(text.slice(0, 180)) + "..."; }
+    var start = Math.max(0, i - 90);
+    return (start > 0 ? "..." : "") + esc(text.slice(start, start + 220)) + "...";
+  }
+
+  function run() {
+    var q = input.value.trim().toLowerCase();
+    if (q.length < 2) { out.innerHTML = ""; count.textContent = ""; return; }
+    var terms = q.split(/\s+/);
+
+    var hits = items.filter(function (p) {
+      var hay = (p.title + " " + p.text + " " +
+                 (p.tags || []).join(" ") + " " +
+                 (p.organizations || []).join(" ")).toLowerCase();
+      return terms.every(function (t) { return hay.indexOf(t) !== -1; });
+    });
+
+    count.textContent = hits.length + (hits.length === 1 ? " item" : " items");
+
+    out.innerHTML = hits.map(function (p) {
+      var meta = [p.date].concat(p.organizations || []).concat(p.tags || []).map(esc).join(" &middot; ");
+      return "<article style='margin-bottom:1.6em'>" +
+             "<a href='" + p.url + "'><strong>" + esc(p.title) + "</strong></a>" +
+             "<div class='post-meta'>" + meta + "</div>" +
+             "<p>" + snippet(p.text, terms[0]) + "</p>" +
+             "</article>";
+    }).join("");
+  }
+
+  input.addEventListener("input", run);
+})();
+</script>

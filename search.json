@@ -1,0 +1,17 @@
+---
+layout: null
+---
+[
+  {% for item in site.items %}
+  {%- assign anchor = item.slug | default: item.title | slugify -%}
+  {%- capture item_url -%}{{ item.briefing | date: "/%Y/%m/%d/briefing/" | relative_url }}#{{ anchor }}{%- endcapture -%}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": {{ item_url | strip | jsonify }},
+    "date": {{ item.date | date: "%b %-d, %Y" | jsonify }},
+    "tags": {{ item.tags | jsonify }},
+    "organizations": {{ item.organizations | jsonify }},
+    "text": {{ item.content | markdownify | strip_html | normalize_whitespace | jsonify }}
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

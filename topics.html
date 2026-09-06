@@ -4,30 +4,41 @@ title: Topics
 permalink: /topics/
 ---
 
-<p>Every briefing that touched each subject, newest first.</p>
+<p>Every news item so far, grouped by subject, newest first.
+Also browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>.</p>
 
-{% assign topics = site.tags | sort %}
+{% assign all = site.items | sort: "date" | reverse %}
 
-{% if topics.size == 0 %}
-  <p>Nothing tagged yet.</p>
-{% else %}
+{% assign present = "" | split: "," %}
+{% for t in site.tag_vocabulary %}
+  {% assign rows = all | where_exp: "i", "i.tags contains t" %}
+  {% if rows.size > 0 %}{% assign present = present | push: t %}{% endif %}
+{% endfor %}
 
-  <p class="post-meta">
-    {% for topic in topics %}
-      <a href="#{{ topic[0] | slugify }}">{{ topic[0] }}</a> ({{ topic[1].size }}){% unless forloop.last %} &middot; {% endunless %}
-    {% endfor %}
-  </p>
-
-  {% for topic in topics %}
-    <h2 id="{{ topic[0] | slugify }}">{{ topic[0] }}</h2>
-    <ul class="post-list">
-      {% for post in topic[1] %}
-        <li>
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+<p class="post-meta">
+  {% for t in present %}
+    {% assign rows = all | where_exp: "i", "i.tags contains t" %}
+    <a href="#{{ t | slugify }}">{{ t }}</a> ({{ rows.size }}){% unless forloop.last %} &middot; {% endunless %}
   {% endfor %}
+</p>
 
+{% for t in present %}
+  {% assign rows = all | where_exp: "i", "i.tags contains t" %}
+  <h2 id="{{ t | slugify }}">{{ t }} <span class="post-meta">({{ rows.size }})</span></h2>
+  {% for it in rows %}{% include item.html item=it backlink=true %}{% endfor %}
+{% endfor %}
+
+{% comment %} Drift check: tags used in items but absent from the vocabulary. {% endcomment %}
+{% assign used = "" | split: "," %}
+{% for item in site.items %}{% for t in item.tags %}
+  {% unless used contains t %}{% assign used = used | push: t %}{% endunless %}
+{% endfor %}{% endfor %}
+{% assign strays = "" | split: "," %}
+{% for t in used %}
+  {% unless site.tag_vocabulary contains t %}{% assign strays = strays | push: t %}{% endunless %}
+{% endfor %}
+{% if strays.size > 0 %}
+  <hr>
+  <p class="post-meta"><strong>Tags not in the vocabulary:</strong> {{ strays | join: ", " }}.
+  Add them to <code>tag_vocabulary</code> in <code>_config.yml</code>, or correct the items using them.</p>
 {% endif %}

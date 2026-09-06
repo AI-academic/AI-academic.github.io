@@ -1,0 +1,125 @@
+# THE list of organizations. This file is both the site's data and your
+# reference: read it here when you need to check a name.
+#
+# When a story names an organization for the first time, add it below with
+# its kind. A name used in an item but missing here still appears on the
+# organizations page, under "Unclassified" -- so a forgotten or misspelled
+# name is visible, never lost.
+#
+# Copy names from this file rather than retyping them: two spellings of one
+# organization silently become two entries.
+#
+# What to list on an item: the organizations the story is ABOUT -- the actors
+# in it -- not every name mentioned in passing. Two to four is usually right.
+# Use the common short form consistently ("MIT", not "Massachusetts Institute
+# of Technology"), and leave the country out of the name.
+#
+# Kinds and their order on the page are set by organization_kinds in
+# _config.yml. Current item counts are on /organizations/ itself.
+# --- university ---
+"Arizona State University":
+  kind: university
+"Bocconi University":
+  kind: university
+"California State University":
+  kind: university
+"Cornell University":
+  kind: university
+"Dalhousie University":
+  kind: university
+"Delaware State University":
+  kind: university
+"Georgia Tech":
+  kind: university
+"MIT":
+  kind: university
+"McGill University":
+  kind: university
+"McMaster University":
+  kind: university
+"Michigan State University":
+  kind: university
+"Northwestern University":
+  kind: university
+"Princeton University":
+  kind: university
+"UC Berkeley":
+  kind: university
+"UC Irvine":
+  kind: university
+"University College London":
+  kind: university
+"University of British Columbia":
+  kind: university
+"University of Chicago":
+  kind: university
+"University of Colorado":
+  kind: university
+"University of Delaware":
+  kind: university
+"University of Iowa":
+  kind: university
+"University of Texas at Austin":
+  kind: university
+"University of Waterloo":
+  kind: university
+
+# --- research ---
+"Amii":
+  kind: research
+
+# --- government ---
+"CanNor":
+  kind: government
+"European AI Office":
+  kind: government
+"Government of Canada":
+  kind: government
+"Government of Ukraine":
+  kind: government
+"National Science Foundation":
+  kind: government
+"Natural Resources Canada":
+  kind: government
+"State of California":
+  kind: government
+"U.S. Department of Education":
+  kind: government
+"UK Government":
+  kind: government
+"UNESCO":
+  kind: government
+
+# --- association ---
+"EDUCAUSE":
+  kind: association
+"Higher Learning Commission":
+  kind: association
+"Prosper Northwest Territories":
+  kind: association
+"Quality Matters":
+  kind: association
+
+# --- company ---
+"Anthropic":
+  kind: company
+"Encoura Eduventures Research":
+  kind: company
+"Google":
+  kind: company
+"Hugging Face":
+  kind: company
+"Microsoft":
+  kind: company
+"Nvidia":
+  kind: company
+"OpenAI":
+  kind: company
+"Sony Music":
+  kind: company
+"Warner Chappell":
+  kind: company
+
+# --- publisher ---
+"Nature":
+  kind: publisher

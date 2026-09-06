@@ -3,9 +3,65 @@ title: "Academic AI News and Updates"
 description: "A curated roundup of academic AI related news and stories, updated regularly."
 url: "https://ai-academic.github.io"
 
-# ---- leave these alone ----
+# ---- machinery: leave alone ----
 theme: minima
 plugins:
   - jekyll-feed
-show_excerpts: true
 permalink: /:year/:month/:day/:title/
+
+collections:
+  items:
+    output: false
+
+# Standing sections of a briefing, in the order they appear.
+# 'key' is what you write in an item's front matter.
+sections:
+  - key: ontario
+    label: "Ontario institution updates"
+  - key: canada
+    label: "Canadian academic institutions"
+  - key: international
+    label: "International academic institutions"
+  - key: government
+    label: "Government updates"
+  - key: sector
+    label: "Updates from other, non-academic sectors"
+  - key: other
+    label: "Other notable updates"
+
+# Fixed tag vocabulary. A tag used in an item but missing here is
+# reported at the foot of the topics page.
+tag_vocabulary:
+  - policy
+  - governance
+  - teaching
+  - assessment
+  - research
+  - publishing
+  - funding
+  - workforce
+  - tools
+  - safety
+  - health
+
+# Kinds of organization, in the order they appear on /organizations/.
+# The kind of each name is set in _data/organizations.yml.
+organization_kinds:
+  - key: university
+    label: "Universities and colleges"
+  - key: research
+    label: "Research institutes and networks"
+  - key: government
+    label: "Governments and public bodies"
+  - key: association
+    label: "Associations, accreditors and non-profits"
+  - key: company
+    label: "Companies"
+  - key: publisher
+    label: "Publishers and journals"
+
+# Repository documentation: kept in the repo, not served as site URLs.
+exclude:
+  - README.md
+  - TAGS.md
+  - HOW-TO-INSTALL.md

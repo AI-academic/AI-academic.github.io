@@ -1,0 +1,39 @@
+{%- comment -%}
+  Assembles every item belonging to one briefing, grouped into the standing
+  sections. Call as: {% include briefing-body.html post=page %}
+{%- endcomment -%}
+
+{%- assign day = include.post.date | date: "%Y-%m-%d" -%}
+{%- assign todays = "" | split: "," -%}
+{%- for item in site.items -%}
+  {%- assign iday = item.briefing | date: "%Y-%m-%d" -%}
+  {%- if iday == day -%}{%- assign todays = todays | push: item -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if todays.size == 0 -%}
+  <p><em>No items recorded for this issue.</em></p>
+{%- endif -%}
+
+{%- assign placed = 0 -%}
+{%- for section in site.sections -%}
+  {%- assign rows = todays | where: "section", section.key | sort: "date" | reverse -%}
+  {%- if rows.size > 0 -%}
+    {%- assign placed = placed | plus: rows.size -%}
+    <h2>{{ section.label }}</h2>
+    {%- for it in rows -%}
+      {% include item.html item=it anchor=true %}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- if placed < todays.size -%}
+  <h2>Unfiled</h2>
+  <p class="post-meta"><em>These items have a <code>section:</code> value that is not listed in _config.yml.</em></p>
+  {%- for it in todays -%}
+    {%- assign known = false -%}
+    {%- for section in site.sections -%}
+      {%- if section.key == it.section -%}{%- assign known = true -%}{%- endif -%}
+    {%- endfor -%}
+    {%- unless known -%}{% include item.html item=it anchor=true %}{%- endunless -%}
+  {%- endfor -%}
+{%- endif -%}

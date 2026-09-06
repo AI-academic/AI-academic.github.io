@@ -1,0 +1,92 @@
+---
+layout: page
+title: Organizations
+permalink: /organizations/
+---
+
+<p>Every organization named in a news item, grouped by kind and listed alphabetically.
+Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
+
+{% assign all = site.items | sort: "date" | reverse %}
+
+{% comment %} Collect every name used across the items. {% endcomment %}
+{% assign names = "" | split: "," %}
+{% for item in site.items %}{% for n in item.organizations %}
+  {% unless names contains n %}{% assign names = names | push: n %}{% endunless %}
+{% endfor %}{% endfor %}
+{% assign names = names | sort_natural %}
+
+{% comment %} Jump bar across the kinds. {% endcomment %}
+<p class="post-meta">
+  {% for kind in site.organization_kinds %}
+    <a href="#{{ kind.key }}">{{ kind.label }}</a>{% unless forloop.last %} &middot; {% endunless %}
+  {% endfor %}
+</p>
+
+{% assign classified = 0 %}
+{% for kind in site.organization_kinds %}
+
+  {% assign group = "" | split: "," %}
+  {% for n in names %}
+    {% assign rec = site.data.organizations[n] %}
+    {% if rec.kind == kind.key %}{% assign group = group | push: n %}{% endif %}
+  {% endfor %}
+
+  {% if group.size > 0 %}
+    {% assign classified = classified | plus: group.size %}
+    <h2 id="{{ kind.key }}">{{ kind.label }} <span class="post-meta">({{ group.size }})</span></h2>
+
+    <p class="post-meta">
+      {% for n in group %}<a href="#{{ n | slugify }}">{{ n }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
+    </p>
+
+    {% for n in group %}
+      {% assign rows = all | where_exp: "i", "i.organizations contains n" %}
+      <h3 id="{{ n | slugify }}">{{ n }} <span class="post-meta">({{ rows.size }})</span></h3>
+      {% comment %}
+        Compact list: this page is for looking something up, so it shows titles
+        rather than full text. To show full items instead, replace the <ul>
+        block below with:  {% raw %}{% for it in rows %}{% include item.html item=it backlink=true %}{% endfor %}{% endraw %}
+      {% endcomment %}
+      <ul class="post-list">
+        {% for it in rows %}
+          {%- assign it_slug = it.slug | default: it.title | slugify -%}
+          <li>
+            <span class="post-meta">{{ it.date | date: "%b %-d, %Y" }}</span>
+            <a class="post-link" href="{{ it.briefing | date: '/%Y/%m/%d/briefing/' | relative_url }}#{{ it_slug }}">{{ it.title }}</a>
+            {% if it.tags.size > 0 %}<span class="post-meta">{{ it.tags | join: ", " }}</span>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endfor %}
+  {% endif %}
+
+{% endfor %}
+
+{% comment %} Anything used in an item but absent from the registry. {% endcomment %}
+{% if classified < names.size %}
+  <h2 id="unclassified">Unclassified</h2>
+  <p class="post-meta">These names appear in items but are not listed in
+  <code>_data/organizations.yml</code>. Add them there with a <code>kind</code>,
+  or correct the spelling in the items that use them.</p>
+  {% for n in names %}
+    {% assign rec = site.data.organizations[n] %}
+    {% unless rec %}
+      {% assign rows = all | where_exp: "i", "i.organizations contains n" %}
+      <h3 id="{{ n | slugify }}">{{ n }} <span class="post-meta">({{ rows.size }})</span></h3>
+      <ul class="post-list">
+        {% for it in rows %}
+          {%- assign it_slug = it.slug | default: it.title | slugify -%}
+          <li>
+            <span class="post-meta">{{ it.date | date: "%b %-d, %Y" }}</span>
+            <a class="post-link" href="{{ it.briefing | date: '/%Y/%m/%d/briefing/' | relative_url }}#{{ it_slug }}">{{ it.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endunless %}
+  {% endfor %}
+{% endif %}
+
+{% if names.size == 0 %}
+  <p>No organizations recorded yet. Add an <code>organizations:</code> list to your item files.</p>
+{% endif %}
