@@ -60,6 +60,13 @@ organization_kinds:
   - key: publisher
     label: "Publishers and journals"
 
+# Order of sections to browse
+header_pages:
+  - archive.md
+  - organizations.html
+  - topics.html
+  - search.html
+  
 # Repository documentation: kept in the repo, not served as site URLs.
 exclude:
   - README.md
