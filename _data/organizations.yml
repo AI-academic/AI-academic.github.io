@@ -27,9 +27,17 @@
   kind: university
 "Dalhousie University":
   kind: university
+"Deakin University":
+  kind: university
 "Delaware State University":
   kind: university
+"Emory University":
+  kind: university
+"Georgetown University":
+  kind: university
 "Georgia Tech":
+  kind: university
+"HKUST":
   kind: university
 "MIT":
   kind: university
@@ -43,11 +51,15 @@
   kind: university
 "Princeton University":
   kind: university
+"Stanford University":
+  kind: university
 "UC Berkeley":
   kind: university
 "UC Irvine":
   kind: university
 "University College London":
+  kind: university
+"University of Auckland":
   kind: university
 "University of British Columbia":
   kind: university
@@ -59,13 +71,21 @@
   kind: university
 "University of Iowa":
   kind: university
+"University of Oxford":
+  kind: university
 "University of Texas at Austin":
   kind: university
 "University of Waterloo":
   kind: university
+"University of Wyoming":
+  kind: university
+"York University":
+  kind: university
 
 # --- research ---
 "Amii":
+  kind: research
+"Mila":
   kind: research
 
 # --- government ---
@@ -74,6 +94,8 @@
 "European AI Office":
   kind: government
 "Government of Canada":
+  kind: government
+"Government of Manitoba":
   kind: government
 "Government of Ukraine":
   kind: government
@@ -91,7 +113,11 @@
   kind: government
 
 # --- association ---
+"Alberta Teachers' Association":
+  kind: association
 "EDUCAUSE":
+  kind: association
+"Federation of Canadian Municipalities":
   kind: association
 "Higher Learning Commission":
   kind: association
@@ -103,11 +129,17 @@
 # --- company ---
 "Anthropic":
   kind: company
+"BoodleBox":
+  kind: company
+"Cubby":
+  kind: company
 "Encoura Eduventures Research":
   kind: company
 "Google":
   kind: company
 "Hugging Face":
+  kind: company
+"KPMG Canada":
   kind: company
 "Microsoft":
   kind: company
@@ -122,4 +154,6 @@
 
 # --- publisher ---
 "Nature":
+  kind: publisher
+"Retraction Watch":
   kind: publisher
