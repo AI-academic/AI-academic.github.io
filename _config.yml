@@ -16,16 +16,12 @@ collections:
 # Standing sections of a briefing, in the order they appear.
 # 'key' is what you write in an item's front matter.
 sections:
-  - key: ontario
-    label: "Ontario institution updates"
   - key: canada
     label: "Canadian academic institutions"
   - key: international
     label: "International academic institutions"
   - key: government
     label: "Government updates"
-  - key: sector
-    label: "Updates from other, non-academic sectors"
   - key: other
     label: "Other notable updates"
 
