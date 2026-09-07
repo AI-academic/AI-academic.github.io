@@ -31,7 +31,7 @@ split or drop any tag appearing on more than seven items in ten.
 
 Written as `section:` in each item; defined in `_config.yml`.
 
-`ontario` · `canada` · `international` · `government` · `sector` · `other`
+`canada` · `international` · `government` · `other`
 
 An item whose section is not in that list appears under an "Unfiled" heading
 at the foot of its briefing rather than vanishing.
