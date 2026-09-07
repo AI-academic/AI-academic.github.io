@@ -61,8 +61,8 @@ happened; briefing pages gather by when it was published.
   `_config.yml`. Two to four per item. Do not invent one mid-issue.
 - **Organizations** are the actors in a story, not every name mentioned.
   Copy the spelling from `_data/organizations.yml`.
-- **Sections** are `ontario`, `canada`, `international`, `government`,
-  `sector`, `other`, defined in `_config.yml`.
+- **Sections** are `canada`, `international`, `government`,
+  `other`, defined in `_config.yml`.
 
 ## When something is wrong
 
