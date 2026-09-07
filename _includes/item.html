@@ -29,6 +29,42 @@
   </p>
   {%- endif %}
 
+  {%- comment -%}
+    Related items. An item names others in its front matter as
+    related: [slug, slug]. The link is reciprocal without being written twice:
+    every item that names THIS one is collected here too, so the pairing only
+    has to be recorded once, on whichever item was written second.
+    A slug with no matching item is shown as unresolved rather than dropped.
+  {%- endcomment -%}
+  {%- assign rel_slugs = "" | split: "," -%}
+  {%- for s in it.related -%}
+    {%- unless s == it_slug or rel_slugs contains s -%}
+      {%- assign rel_slugs = rel_slugs | push: s -%}
+    {%- endunless -%}
+  {%- endfor -%}
+  {%- for other in site.items -%}
+    {%- if other.related contains it_slug -%}
+      {%- assign o_slug = other.slug | default: other.title | slugify -%}
+      {%- unless o_slug == it_slug or rel_slugs contains o_slug -%}
+        {%- assign rel_slugs = rel_slugs | push: o_slug -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- if rel_slugs.size > 0 %}
+  <p class="post-meta"><strong>Related:</strong>
+    {% for s in rel_slugs %}
+      {%- assign hit = site.items | where: "slug", s | first -%}
+      {%- if hit -%}
+        <a href="{{ hit.briefing | date: '/%Y/%m/%d/briefing/' | relative_url }}#{{ s }}">{{ hit.title }}</a>
+      {%- else -%}
+        <em>{{ s }} (no item with this slug)</em>
+      {%- endif -%}
+      {%- unless forloop.last %} &middot; {% endunless -%}
+    {% endfor %}
+  </p>
+  {%- endif %}
+
   {%- if include.backlink %}
   <p class="post-meta"><a href="{{ it.briefing | date: '/%Y/%m/%d/briefing/' | relative_url }}#{{ it_slug }}">in the {{ it.briefing | date: "%b %-d, %Y" }} briefing</a></p>
   {%- endif %}

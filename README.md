@@ -32,6 +32,7 @@ section: international
 tags: [assessment, governance]
 organizations:
   - "Cornell University"
+related: [nature-ai-detection-tools]   # optional; slugs of other items
 sources:
   - label: "Cornell hopes to turn cheating into a teachable moment"
     url: "https://www.insidehighered.com/news/students/academics/..."
@@ -42,6 +43,12 @@ Body prose, in markdown.
 `date` and `briefing` are separate on purpose: an issue routinely carries news
 from the preceding week. Topic and organization pages sort by when the news
 happened; briefing pages gather by when it was published.
+
+`related` is optional and reciprocal. Name another item's slug and both items
+show a link to the other, so a pairing is recorded once — on whichever item was
+written second — and never has to be maintained in two places. Two related
+items are usually plenty; the line is for a reader who wants the earlier story,
+not a see-also index.
 
 ## What is where
 
@@ -63,6 +70,8 @@ happened; briefing pages gather by when it was published.
   Copy the spelling from `_data/organizations.yml`.
 - **Sections** are `canada`, `international`, `government`,
   `other`, defined in `_config.yml`.
+- **Related items** are named by slug, never by title, and only in one
+  direction. The reverse link appears on its own.
 
 ## When something is wrong
 
@@ -73,6 +82,8 @@ Mistakes are made visible rather than silent:
   at the foot of `/organizations/`.
 - An item with an unrecognised `section` appears under **Unfiled** at the
   foot of its briefing.
+- A `related` slug that matches no item is printed under the item as
+  unresolved, so a typo or a renamed slug shows up on the page.
 - An item that does not appear at all is usually a filename or date problem:
   `_posts` filenames must be `YYYY-MM-DD-name.md` with hyphens, and an item's
   `briefing` date must match a post that exists.

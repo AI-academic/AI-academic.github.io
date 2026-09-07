@@ -16,6 +16,51 @@ Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
 {% endfor %}{% endfor %}
 {% assign names = names | sort_natural %}
 
+{% assign alphabet = "A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z" | split: "," %}
+
+{% comment %} Alphabetical jump bar. Letters with no organization are shown dim and unlinked. {% endcomment %}
+{% if names.size > 0 %}
+<p class="post-meta">
+  {%- for L in alphabet -%}
+    {%- assign hits = 0 -%}
+    {%- for n in names -%}
+      {%- assign f = n | slice: 0 | upcase -%}
+      {%- if f == L %}{% assign hits = hits | plus: 1 %}{% endif -%}
+    {%- endfor -%}
+    {%- if hits > 0 %}<a href="#az-{{ L | downcase }}">{{ L }}</a>{% else %}<span style="opacity:.3">{{ L }}</span>{% endif -%}
+    {%- unless forloop.last %} {% endunless -%}
+  {%- endfor -%}
+</p>
+
+{% comment %} The A-Z index itself: names link down to their own heading. {% endcomment %}
+{% assign lettered = 0 %}
+{% for L in alphabet %}
+  {% assign bucket = "" | split: "," %}
+  {% for n in names %}
+    {% assign f = n | slice: 0 | upcase %}
+    {% if f == L %}{% assign bucket = bucket | push: n %}{% endif %}
+  {% endfor %}
+  {% if bucket.size > 0 %}
+    {% assign lettered = lettered | plus: bucket.size %}
+    <p id="az-{{ L | downcase }}"><strong>{{ L }}</strong> &middot;
+      {% for n in bucket %}<a href="#{{ n | slugify }}">{{ n }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
+    </p>
+  {% endif %}
+{% endfor %}
+
+{% comment %} Names that do not start with a letter still have to appear somewhere. {% endcomment %}
+{% if lettered < names.size %}
+  <p id="az-other"><strong>Other</strong> &middot;
+    {% for n in names %}
+      {% assign f = n | slice: 0 | upcase %}
+      {% unless alphabet contains f %}<a href="#{{ n | slugify }}">{{ n }}</a> {% endunless %}
+    {% endfor %}
+  </p>
+{% endif %}
+
+<hr>
+{% endif %}
+
 {% comment %} Jump bar across the kinds. {% endcomment %}
 <p class="post-meta">
   {% for kind in site.organization_kinds %}
