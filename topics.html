@@ -4,7 +4,8 @@ title: Topics
 permalink: /topics/
 ---
 
-<p>Every news item so far, grouped by subject, newest first.
+<p>Every news item so far, grouped by subject, newest first. Each title links to
+the story in the briefing that carried it.
 Also browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>.</p>
 
 {% assign all = site.items | sort: "date" | reverse %}
@@ -25,7 +26,23 @@ Also browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>
 {% for t in present %}
   {% assign rows = all | where_exp: "i", "i.tags contains t" %}
   <h2 id="{{ t | slugify }}">{{ t }} <span class="post-meta">({{ rows.size }})</span></h2>
-  {% for it in rows %}{% include item.html item=it backlink=true %}{% endfor %}
+  {% comment %}
+    Compact list, as on /organizations/: an item carries two to four tags, so
+    rendering it in full here would print the whole archive several times over
+    and the page would grow without limit. The full text lives on the briefing
+    page each title links to. To show full items instead, replace the <ul>
+    block below with:  {% raw %}{% for it in rows %}{% include item.html item=it backlink=true %}{% endfor %}{% endraw %}
+  {% endcomment %}
+  <ul class="post-list">
+    {% for it in rows %}
+      {%- assign it_slug = it.slug | default: it.title | slugify -%}
+      <li>
+        <span class="post-meta">{{ it.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ it.briefing | date: '/%Y/%m/%d/briefing/' | relative_url }}#{{ it_slug }}">{{ it.title }}</a>
+        {% if it.organizations.size > 0 %}<span class="post-meta">{{ it.organizations | join: ", " }}</span>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
 {% endfor %}
 
 {% comment %} Drift check: tags used in items but absent from the vocabulary. {% endcomment %}
