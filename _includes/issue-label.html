@@ -26,5 +26,5 @@
 {%- if idx == 0 -%}
 {{ p.title }}
 {%- else -%}
-Issue {{ issue }} &middot; {{ p.date | date: "%B %-d, %Y" }} &middot; {{ n }} update{% unless n == 1 %}s{% endunless %}
+Issue {{ issue }} · {{ p.date | date: "%B %-d, %Y" }} · {{ n }} update{% unless n == 1 %}s{% endunless %}
 {%- endif -%}

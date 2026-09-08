@@ -1,0 +1,43 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+{%- comment -%}
+  Full-content Atom feed. jekyll-feed publishes each post's own body, which for
+  this site is a one-line note, so its feed carried no stories. This template
+  assembles each issue exactly as the briefing page does and puts the whole
+  thing in the feed, which is what lets an email service deliver a readable
+  briefing rather than a link.
+
+  Two details make that safe:
+    - the body is wrapped in CDATA rather than escaped, so HTML entities such as
+      &middot; survive instead of being double-escaped into visible text;
+    - every relative link is rewritten to an absolute one, because a feed is
+      read away from this site.
+
+  jekyll-feed still runs, at /summary.xml (see _config.yml), because the theme's
+  head calls its feed_meta tag.
+{%- endcomment -%}
+{%- assign prefix = 'href="' | append: site.url | append: '/' -%}
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ site.title | xml_escape }}</title>
+  <subtitle>{{ site.description | xml_escape }}</subtitle>
+  <id>{{ site.url }}/</id>
+  <link href="{{ site.url }}/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="{{ site.url }}/" rel="alternate" type="text/html" />
+  <updated>{{ site.posts.first.date | date_to_xmlschema }}</updated>
+  <generator uri="https://jekyllrb.com/">Jekyll</generator>
+{% for post in site.posts limit: 20 %}
+  {%- capture label %}{% include issue-label.html post=post %}{% endcapture -%}
+  {%- capture body %}{{ post.content }}{% include briefing-body.html post=post %}{% endcapture -%}
+  {%- assign safe = body | replace: 'href="/', prefix | replace: ']]>', ']]&gt;' -%}
+  <entry>
+    <title>{{ label | strip | xml_escape }}</title>
+    <link href="{{ post.url | absolute_url }}" rel="alternate" type="text/html" />
+    <id>{{ post.url | absolute_url }}</id>
+    <published>{{ post.date | date_to_xmlschema }}</published>
+    <updated>{{ post.date | date_to_xmlschema }}</updated>
+    <content type="html"><![CDATA[{{ safe }}]]></content>
+  </entry>
+{% endfor %}
+</feed>

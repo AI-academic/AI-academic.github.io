@@ -9,6 +9,13 @@ plugins:
   - jekyll-feed
 permalink: /:year/:month/:day/:title/
 
+# The feed readers and email services subscribe to is /feed.xml, built by
+# feed.xml in this repository: it carries each issue's full text. jekyll-feed
+# stays installed because the theme's head calls its feed_meta tag, but its
+# own summary-only feed is moved aside so the two do not collide.
+feed:
+  path: /summary.xml
+
 collections:
   items:
     output: false
