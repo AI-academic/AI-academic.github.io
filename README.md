@@ -72,6 +72,12 @@ not a see-also index.
   `other`, defined in `_config.yml`.
 - **Related items** are named by slug, never by title, and only in one
   direction. The reverse link appears on its own.
+- **Sources** go primary document first, later coverage after. A second source
+  has to add something the first does not, and its label has to say what:
+  "Companion release" tells a reader nothing, "Companion release: UK access to
+  Ukraine's AI labs" tells them whether to click. One source renders inline;
+  two or more are stacked as a list with their domains, so the label is what
+  the reader chooses on.
 
 ## When something is wrong
 

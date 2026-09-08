@@ -23,10 +23,30 @@
 
   {{ it.content | markdownify }}
 
-  {%- if it.sources.size > 0 %}
+  {%- comment -%}
+    Sources. One source stays on a single line. Two or more are stacked under a
+    heading that names the count, because a row of links separated by dots reads
+    as one link. Each carries its domain, which is what tells a reader whether a
+    second link is the primary document or later coverage of it.
+  {%- endcomment -%}
+  {%- if it.sources.size == 1 %}
+    {%- assign s = it.sources | first -%}
+    {%- assign host = s.url | split: "://" | last | split: "/" | first | remove_first: "www." -%}
   <p class="post-meta"><strong>Read here:</strong>
-    {% for s in it.sources %}<a href="{{ s.url }}">{{ s.label }}</a>{% unless forloop.last %} &middot; {% endunless %}{% endfor %}
+    <a href="{{ s.url }}">{{ s.label }}</a>
+    <span class="post-meta">{{ host }}{% if s.url contains ".pdf" %} &middot; PDF{% endif %}</span>
   </p>
+  {%- elsif it.sources.size > 1 %}
+  <p class="post-meta"><strong>{{ it.sources.size }} sources</strong></p>
+  <ul class="source-list">
+    {%- for s in it.sources %}
+      {%- assign host = s.url | split: "://" | last | split: "/" | first | remove_first: "www." %}
+    <li>
+      <a href="{{ s.url }}">{{ s.label }}</a>
+      <span class="post-meta">{{ host }}{% if s.url contains ".pdf" %} &middot; PDF{% endif %}</span>
+    </li>
+    {%- endfor %}
+  </ul>
   {%- endif %}
 
   {%- comment -%}
