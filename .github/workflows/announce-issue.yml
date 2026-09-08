@@ -1,0 +1,40 @@
+name: Announce new issue
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '_posts/**'
+  workflow_dispatch:
+    inputs:
+      issue_date:
+        description: 'Issue to send, as YYYY-MM-DD. Blank means the newest.'
+        required: false
+        default: ''
+
+permissions:
+  contents: read
+
+concurrency:
+  group: announce-issue
+  cancel-in-progress: false
+
+jobs:
+  announce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Compose and send
+        env:
+          MAIL_USERNAME: ${{ secrets.MAIL_USERNAME }}
+          MAIL_APP_PASSWORD: ${{ secrets.MAIL_APP_PASSWORD }}
+          LIST_ADDRESS: ${{ secrets.LIST_ADDRESS }}
+          REPLY_TO: ${{ secrets.REPLY_TO }}
+          SENDER_NAME: Academic AI News and Updates
+          ISSUE_DATE: ${{ github.event.inputs.issue_date }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: python3 .github/scripts/announce_issue.py
