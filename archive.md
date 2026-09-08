@@ -7,8 +7,7 @@ permalink: /archive/
 <ul class="post-list">
   {% for post in site.posts %}
   <li>
-    <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <a class="post-link" href="{{ post.url | relative_url }}">{% include issue-label.html post=post %}</a>
   </li>
   {% endfor %}
 </ul>

@@ -1,0 +1,30 @@
+{%- comment -%}
+  Composes one issue's label: "Issue 8 · September 6, 2026 · 12 updates".
+
+  Every part is computed, so nothing has to be kept in step by hand. The number
+  is the post's position in the archive counted from the first issue; the count
+  is how many items name this issue in their `briefing` field, so adding or
+  removing a story corrects the label everywhere it appears.
+
+  Call as: {% include issue-label.html post=page %}
+{%- endcomment -%}
+{%- assign p = include.post -%}
+
+{%- assign idx = 0 -%}
+{%- for q in site.posts -%}
+  {%- if q.url == p.url -%}{%- assign idx = forloop.index -%}{%- endif -%}
+{%- endfor -%}
+{%- assign issue = site.posts.size | plus: 1 | minus: idx -%}
+
+{%- assign day = p.date | date: "%Y-%m-%d" -%}
+{%- assign n = 0 -%}
+{%- for item in site.items -%}
+  {%- assign iday = item.briefing | date: "%Y-%m-%d" -%}
+  {%- if iday == day -%}{%- assign n = n | plus: 1 -%}{%- endif -%}
+{%- endfor -%}
+
+{%- if idx == 0 -%}
+{{ p.title }}
+{%- else -%}
+Issue {{ issue }} &middot; {{ p.date | date: "%B %-d, %Y" }} &middot; {{ n }} update{% unless n == 1 %}s{% endunless %}
+{%- endif -%}

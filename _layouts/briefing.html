@@ -4,10 +4,7 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">
-      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
-    </p>
+    <h1 class="post-title">{% include issue-label.html post=page %}</h1>
   </header>
 
   <div class="post-content">
