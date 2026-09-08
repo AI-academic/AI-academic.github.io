@@ -79,6 +79,30 @@ not a see-also index.
   two or more are stacked as a list with their domains, so the label is what
   the reader chooses on.
 
+## Announcing an issue by email
+
+A workflow in `.github/workflows/announce-issue.yml` mails the briefing list
+whenever a **new** file appears in `_posts/`. Editing an existing issue sends
+nothing. It waits for GitHub Pages to publish the issue before sending, so the
+link in the message is live on arrival, and it composes the message from the
+repository itself -- the same issue label the site shows, and every story
+headline grouped into the standing sections.
+
+Set up once, in Settings -> Secrets and variables -> Actions:
+
+| Secret | What it is |
+|---|---|
+| `MAIL_USERNAME` | the Gmail address that sends |
+| `MAIL_APP_PASSWORD` | a Gmail app password, which needs 2-Step Verification |
+| `LIST_ADDRESS` | the Google Group address the mail goes to |
+
+The list itself lives in the Google Group, not in this repository -- joining and
+leaving are handled there, and no subscriber address is ever stored here. That
+matters because this repository is public.
+
+To resend an issue, or to send one the workflow missed, use **Run workflow** on
+the Actions tab and give a date such as `2026-09-12`.
+
 ## When something is wrong
 
 Mistakes are made visible rather than silent:
