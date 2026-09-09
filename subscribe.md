@@ -11,7 +11,7 @@ There are three ways to learn about a new issue.
 
 One message per issue — every story headline, with links. Nothing else is ever sent to the list, and you can leave at any time using the link at the foot of each message.
 
-**In a feed reader:** The feed is at **[/feed.xml]({{ '/feed.xml' | relative_url }})** and carries each issue in full. Use any reader — Feedly, Inoreader, NetNewsWire, Thunderbird.
+**In a feed reader:** The feed is at **[/feed.xml]({{ '/feed.xml' | relative_url }})** and carries each issue in full. Use any feed reader — Feedly, Inoreader, NetNewsWire, Thunderbird.
 
 **By email, without joining the list:** If you would rather not be on a list, a feed-to-email service will mail you the feed directly. [Blogtrottr](https://blogtrottr.com/) is the straightforward one to try.
 
