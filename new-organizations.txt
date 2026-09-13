@@ -1,0 +1,30 @@
+# New organizations used in the 12 September 2026 issue.
+# Merge these entries into _data/organizations.yml, keeping that file's
+# existing order. Everything else this issue names is already registered.
+
+"CIFAR":
+  kind: research
+"Fudan University":
+  kind: university
+"Government of Ontario":
+  kind: government
+"Government of South Korea":
+  kind: government
+"Mitacs":
+  kind: association
+"Next Generation Manufacturing Canada":
+  kind: association
+"Ohio State University":
+  kind: university
+"Tsinghua University":
+  kind: university
+"UK Research and Innovation":
+  kind: government
+"University of Alberta":
+  kind: university
+"University of Sydney":
+  kind: university
+"UNSW Sydney":
+  kind: university
+"Vector Institute":
+  kind: research
