@@ -6,8 +6,8 @@ permalink: /subscribe/
 
 There are three ways to learn about a new issue. 
 
-**By email:** Join the mailing list by sending a blank email to
-[ai-academic-briefing+subscribe@googlegroups.com](mailto:ai-academic-briefing+subscribe@googlegroups.com).
+**By email:** Join the mailing list by sending a BLANK email to
+[B Gupta](mailto:bgupta.bio@gmail.com?subject=Subscribe%20AI-Academic).
 
 One message per issue — every story headline, with links. Nothing else is ever sent to the list, and you can leave at any time using the link at the foot of each message.
 
