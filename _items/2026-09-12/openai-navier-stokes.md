@@ -12,7 +12,7 @@ sources:
     url: "https://openai.com/index/navier-stokes-solution/"
   - label: "Quanta on the claim: AI has solved one of maths' $1 million Millennium Prize problems"
     url: "https://www.quantamagazine.org/ai-has-solved-one-of-maths-1-million-millennium-prize-problems-20260908/"
-  - label: "Nature's news report, on the competing claims released the same week (paywalled)"
+  - label: "Nature's news report, on the competing claims released the same week"
     url: "https://www.nature.com/articles/d41586-026-02842-5"
 ---
 OpenAI published a proposed analytical proof of the Navier–Stokes problem, stating that its solution establishes statement "C" — and also "D" — in the [official Millennium Prize formulation](https://www.claymath.org/millennium-problems/). The company says the work came from an internal model "significantly more capable than GPT-6 Astra" coordinating 10,000 agents that worked together for roughly 88 hours; the post was updated on 10 September. Independent mathematical review remains incomplete, and the company does not intend to claim the Millennium Prize. Questions have been raised about priority and possible influence from the work of Tristan Buckmaster (NYU) and Levent Alpöge (Anthropic), who resolved related Euler equation problems twelve hours earlier, and Buckmaster has suggested OpenAI's agents may have benefited from his team's prior work, which was itself conducted using OpenAI's models. The attribution question here is not incidental to the result; it is the result's main unresolved feature.
