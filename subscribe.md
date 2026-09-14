@@ -11,7 +11,7 @@ There are three ways to learn about a new issue.
 
 Requests are added by hand, so allow a day or two. There is nothing else you need to do, and you will start with the next issue.
 
-One message per issue, contains every story headline, with links. Nothing else is ever sent to the list, and you can leave any time by sending an 'unsubscribe' request **[here](mailto:bgupta.bio@gmail.com?subject=Remove%20my%20name%20from%20AI-Academic%20list)**.
+One message per issue, contains every story headline, with links. Nothing else is ever sent to the list, and you can leave any time by sending an 'unsubscribe' request **[here](mailto:bgupta.bio@gmail.com?subject=Remove%20me%20from%20AI-Academic%20list)**.
 
 <p style="border-left: 4px solid #b23b2e; background: #fdf2f0; color: #8a2f24; padding: 0.75em 1em; margin: 1.25em 0; border-radius: 3px;">Check your spam or bulk folder. New issue may land there the first time. Mark the message <em>not spam</em> and add <strong>ai-academic-briefing@googlegroups.com</strong> to your contacts, so later issues can arrive in your inbox.</p>
 
