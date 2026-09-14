@@ -1,0 +1,43 @@
+{% comment %}
+  Shared styling for the jump bars at the head of /organizations/ and /topics/,
+  and for the landing highlight both pages use. Included from those two pages;
+  nothing else references it.
+
+  Colours are translucent greys and a translucent yellow rather than fixed
+  values, so the page reads correctly on a light or a dark skin without the
+  palette having to be restated.
+{% endcomment %}
+<style>
+  .jump-nav { margin: 1.4rem 0 1.6rem; padding-bottom: 1.1rem;
+              border-bottom: 2px solid rgba(128,128,128,.45); }
+  .jump-label { display: block; font-size: .75rem; letter-spacing: .09em;
+                text-transform: uppercase; opacity: .6; margin-bottom: .55rem; }
+
+  /* Single letters: fixed width so the row reads as a keypad. */
+  .az-bar { display: flex; flex-wrap: wrap; gap: .35rem .4rem;
+            font-size: 1.1rem; font-weight: 600; }
+  .az-bar a, .az-bar span { display: inline-block; min-width: 1.8em; text-align: center;
+                            padding: .18em .25em; border-radius: 4px; }
+  .az-bar a { border: 1px solid rgba(128,128,128,.35); text-decoration: none; }
+  .az-bar a:hover { background: rgba(128,128,128,.16); text-decoration: none; }
+  .az-bar span { opacity: .28; }
+
+  /* Named categories and topics, with their size alongside. */
+  .pill-bar { display: flex; flex-wrap: wrap; gap: .45rem .5rem; font-size: 1.05rem; }
+  .pill-bar a { display: inline-block; padding: .32em .85em; font-weight: 600;
+                border: 1px solid rgba(128,128,128,.35); border-radius: 999px;
+                text-decoration: none; }
+  .pill-bar a:hover { background: rgba(128,128,128,.16); text-decoration: none; }
+  .pill-bar .n { font-weight: 400; opacity: .6; }
+
+  .az-index p { margin: .35rem 0; }
+
+  /* Landing marker: whatever you jumped to says so until you click elsewhere. */
+  h2[id], h3[id], p[id] { scroll-margin-top: 1rem; }
+  h2[id]:target, h3[id]:target, p[id]:target {
+    background: rgba(255,214,0,.22); border-radius: 3px;
+    box-shadow: 0 0 0 .3rem rgba(255,214,0,.22);
+  }
+
+  .to-top { margin: .2rem 0 2rem; font-size: .8rem; }
+</style>

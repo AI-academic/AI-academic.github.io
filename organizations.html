@@ -4,6 +4,10 @@ title: Organizations
 permalink: /organizations/
 ---
 
+{% include nav-style.html %}
+
+<span id="top"></span>
+
 <p>Every organization named in a news item, grouped by kind and listed alphabetically.
 Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
 
@@ -20,19 +24,22 @@ Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
 
 {% comment %} Alphabetical jump bar. Letters with no organization are shown dim and unlinked. {% endcomment %}
 {% if names.size > 0 %}
-<p class="post-meta">
+<nav class="jump-nav">
+  <span class="jump-label">Jump to a letter</span>
+  <div class="az-bar">
   {%- for L in alphabet -%}
     {%- assign hits = 0 -%}
     {%- for n in names -%}
       {%- assign f = n | slice: 0 | upcase -%}
       {%- if f == L %}{% assign hits = hits | plus: 1 %}{% endif -%}
     {%- endfor -%}
-    {%- if hits > 0 %}<a href="#az-{{ L | downcase }}">{{ L }}</a>{% else %}<span style="opacity:.3">{{ L }}</span>{% endif -%}
-    {%- unless forloop.last %} {% endunless -%}
+    {%- if hits > 0 %}<a href="#az-{{ L | downcase }}" title="{{ hits }} organization{% if hits != 1 %}s{% endif %}">{{ L }}</a>{% else %}<span>{{ L }}</span>{% endif -%}
   {%- endfor -%}
-</p>
+  </div>
+</nav>
 
 {% comment %} The A-Z index itself: names link down to their own heading. {% endcomment %}
+<div class="az-index">
 {% assign lettered = 0 %}
 {% for L in alphabet %}
   {% assign bucket = "" | split: "," %}
@@ -57,16 +64,23 @@ Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
     {% endfor %}
   </p>
 {% endif %}
-
-<hr>
+</div>
 {% endif %}
 
-{% comment %} Jump bar across the kinds. {% endcomment %}
-<p class="post-meta">
-  {% for kind in site.organization_kinds %}
-    <a href="#{{ kind.key }}">{{ kind.label }}</a>{% unless forloop.last %} &middot; {% endunless %}
-  {% endfor %}
-</p>
+{% comment %} Jump bar across the kinds, with the size of each. {% endcomment %}
+<nav class="jump-nav">
+  <span class="jump-label">Jump to a category</span>
+  <div class="pill-bar">
+  {%- for kind in site.organization_kinds -%}
+    {%- assign kcount = 0 -%}
+    {%- for n in names -%}
+      {%- assign rec = site.data.organizations[n] -%}
+      {%- if rec.kind == kind.key %}{% assign kcount = kcount | plus: 1 %}{% endif -%}
+    {%- endfor -%}
+    {%- if kcount > 0 %}<a href="#{{ kind.key }}">{{ kind.label }} <span class="n">{{ kcount }}</span></a>{% endif -%}
+  {%- endfor -%}
+  </div>
+</nav>
 
 {% assign classified = 0 %}
 {% for kind in site.organization_kinds %}
@@ -104,6 +118,8 @@ Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
         {% endfor %}
       </ul>
     {% endfor %}
+
+    <p class="to-top post-meta"><a href="#top">&uarr; Back to top</a></p>
   {% endif %}
 
 {% endfor %}
@@ -130,6 +146,7 @@ Also browse <a href="{{ '/topics/' | relative_url }}">by topic</a>.</p>
       </ul>
     {% endunless %}
   {% endfor %}
+  <p class="to-top post-meta"><a href="#top">&uarr; Back to top</a></p>
 {% endif %}
 
 {% if names.size == 0 %}

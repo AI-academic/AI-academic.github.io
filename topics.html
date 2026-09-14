@@ -4,6 +4,10 @@ title: Topics
 permalink: /topics/
 ---
 
+{% include nav-style.html %}
+
+<span id="top"></span>
+
 <p>Every news item so far, grouped by subject, newest first. Each title links to
 the story in the briefing that carried it.
 Also browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>.</p>
@@ -16,12 +20,18 @@ Also browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>
   {% if rows.size > 0 %}{% assign present = present | push: t %}{% endif %}
 {% endfor %}
 
-<p class="post-meta">
-  {% for t in present %}
-    {% assign rows = all | where_exp: "i", "i.tags contains t" %}
-    <a href="#{{ t | slugify }}">{{ t }}</a> ({{ rows.size }}){% unless forloop.last %} &middot; {% endunless %}
-  {% endfor %}
-</p>
+{% comment %} Jump bar across the topics, with the size of each. {% endcomment %}
+{% if present.size > 0 %}
+<nav class="jump-nav">
+  <span class="jump-label">Jump to a topic</span>
+  <div class="pill-bar">
+  {%- for t in present -%}
+    {%- assign rows = all | where_exp: "i", "i.tags contains t" -%}
+    <a href="#{{ t | slugify }}">{{ t }} <span class="n">{{ rows.size }}</span></a>
+  {%- endfor -%}
+  </div>
+</nav>
+{% endif %}
 
 {% for t in present %}
   {% assign rows = all | where_exp: "i", "i.tags contains t" %}
@@ -43,6 +53,8 @@ Also browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>
       </li>
     {% endfor %}
   </ul>
+
+  <p class="to-top post-meta"><a href="#top">&uarr; Back to top</a></p>
 {% endfor %}
 
 {% comment %} Drift check: tags used in items but absent from the vocabulary. {% endcomment %}
