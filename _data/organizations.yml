@@ -33,6 +33,8 @@
   kind: university
 "Emory University":
   kind: university
+"Fudan University":
+  kind: university
 "Georgetown University":
   kind: university
 "Georgia Tech":
@@ -49,15 +51,21 @@
   kind: university
 "Northwestern University":
   kind: university
+"Ohio State University":
+  kind: university
 "Princeton University":
   kind: university
 "Stanford University":
+  kind: university
+"Tsinghua University":
   kind: university
 "UC Berkeley":
   kind: university
 "UC Irvine":
   kind: university
 "University College London":
+  kind: university
+"University of Alberta":
   kind: university
 "University of Auckland":
   kind: university
@@ -73,11 +81,15 @@
   kind: university
 "University of Oxford":
   kind: university
+"University of Sydney":
+  kind: university
 "University of Texas at Austin":
   kind: university
 "University of Waterloo":
   kind: university
 "University of Wyoming":
+  kind: university
+"UNSW Sydney":
   kind: university
 "York University":
   kind: university
@@ -85,7 +97,11 @@
 # --- research ---
 "Amii":
   kind: research
+"CIFAR":
+  kind: research
 "Mila":
+  kind: research
+"Vector Institute":
   kind: research
 
 # --- government ---
@@ -97,6 +113,10 @@
   kind: government
 "Government of Manitoba":
   kind: government
+"Government of Ontario":
+  kind: government
+"Government of South Korea":
+  kind: government
 "Government of Ukraine":
   kind: government
 "National Science Foundation":
@@ -104,6 +124,8 @@
 "Natural Resources Canada":
   kind: government
 "State of California":
+  kind: government
+"UK Research and Innovation":
   kind: government
 "U.S. Department of Education":
   kind: government
@@ -120,6 +142,10 @@
 "Federation of Canadian Municipalities":
   kind: association
 "Higher Learning Commission":
+  kind: association
+"Mitacs":
+  kind: association
+"Next Generation Manufacturing Canada":
   kind: association
 "Prosper Northwest Territories":
   kind: association
