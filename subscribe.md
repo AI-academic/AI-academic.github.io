@@ -6,8 +6,8 @@ permalink: /subscribe/
 
 There are three ways to learn about a new issue. 
 
-**By email:** Join the mailing list by sending an email to
-**[here](mailto:bgupta.bio@gmail.com?subject=Subscribe%20AI-Academic)**. Simply mention your name in the email body and nothing else.
+**By email:** Join the mailing list by sending an email to Bhagwati Gupta
+**([here](mailto:bgupta.bio@gmail.com?subject=Subscribe%20AI-Academic))**. Simply mention your name in the email body and nothing else.
 
 Requests are added by hand, so allow a day or two. There is nothing else you need to do, and you will start with the next issue.
 
