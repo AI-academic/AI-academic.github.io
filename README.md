@@ -1,9 +1,9 @@
 # AI-academic.github.io
 
-AI related news and development relevant to academic institutions.
-Published at **https://ai-academic.github.io/**
+This site hosts curated AI related news and development relevant to academic institutions.
+Contents are published at **https://ai-academic.github.io/**
 
-A curated briefing. Each news story is a separate file; a briefing for a given date is assembled from the stories that carry that date. That is what lets the same story appear in its briefing, under each of its topics, under each organization it concerns, and in search — without being written more than once.
+Each briefing consists of one or more stories and is typically published once a week. A time-sensitive news can be published sooner. Each news story is a separate file; a briefing for a given date is assembled from the stories that carry that date. That is what lets the same story appear in its briefing, under each of its topics, under each organization it concerns, and in search — without being written more than once.
 
 ## Publishing a briefing
 
@@ -13,7 +13,7 @@ A curated briefing. Each news story is a separate file; a briefing for a given d
 
 The front page, briefing pages, topic pages, organization pages, the search index and the RSS feed all rebuild themselves. Nothing else is edited by hand.
 
-### An item file
+### An item file (as an example)
 
 ```yaml
 ---
@@ -30,12 +30,12 @@ sources:
   - label: "Cornell hopes to turn cheating into a teachable moment"
     url: "https://www.insidehighered.com/news/students/academics/..."
 ---
-Body prose, in markdown.
+Body text, in markdown.
 ```
 
-`date` and `briefing` are separate on purpose: an issue routinely carries news from the preceding week. Topic and organization pages sort by when the news happened; briefing pages gather by when it was published.
+`date` and `briefing` are separate for a reason: an issue routinely carries news from the preceding week. Topic and organization pages sort by when the news happened; briefing pages gather by when it was published.
 
-`related` is optional and reciprocal. Name another item's slug and both items show a link to the other, so a pairing is recorded once — on whichever item was written second — and never has to be maintained in two places. Two related items are usually plenty; the line is for a reader who wants the earlier story, not a see-also index.
+`related` is optional and reciprocal. Naming another item's slug causes both items to show a link to the other, so a pairing is recorded once and on whichever item was written second, and never has to be maintained in two places. Two related items are usually plenty; the link is for a reader who wants the earlier story, not a see-also index. 
 
 ## What is where
 
@@ -59,7 +59,7 @@ Body prose, in markdown.
 
 ## Announcing an issue by email
 
-A workflow in `.github/workflows/announce-issue.yml` mails the briefing list whenever a **new** file appears in `_posts/`. Editing an existing issue sends nothing. It waits for GitHub Pages to publish the issue before sending, so the link in the message is live on arrival, and it composes the message from the repository itself -- the same issue label the site shows, and every story headline grouped into the standing sections.
+A workflow in `.github/workflows/announce-issue.yml` mails the briefing list whenever a **new** file appears in `_posts/`. Editing an existing issue sends nothing. It waits for GitHub Pages to publish the issue before sending, so the link in the message is live on arrival, and it composes the message from the repository itself -- the same issue label the site shows, and every story headline grouped into the standing sections. This setup is currently restricted to the manager. New issue announcements to the community are handled separately. 
 
 Set up once, in Settings -> Secrets and variables -> Actions:
 
@@ -69,15 +69,15 @@ Set up once, in Settings -> Secrets and variables -> Actions:
 | `MAIL_APP_PASSWORD` | a Gmail app password, which needs 2-Step Verification |
 | `LIST_ADDRESS` | the Google Group address the mail goes to |
 
-The list itself lives in the Google Group, not in this repository -- joining and leaving are handled there, and no subscriber address is ever stored here. That matters because this repository is public.
+The Google Group contains just two members (owner and manager). No subscriber address is ever stored here. That matters because this repository is public.
 
-Subscribers are added by hand: a reader emails a request, and the address is added from the group's Members page. There is no self-serve subscribe link, because the confirmation mail Google sends is routinely filed as spam and the join was being lost. `/subscribe/` says so, and tells readers to check their spam or bulk folder for the issues themselves.
+Subscribers are added by hand: a reader emails a request. There is no self-serve subscribe link. The `/subscribe/` tells readers to check their spam or bulk folder for the issues themselves.
 
-To resend an issue, or to send one the workflow missed, use **Run workflow** on the Actions tab and give a date such as `2026-09-12`.
+To resend an issue (to the manager), or to send one the workflow missed, use **Run workflow** on the Actions tab and give a date such as `2026-09-12`.
 
 ## When something is wrong
 
-Mistakes are made visible rather than silent:
+Mistakes are made visible rather than keeping them silent:
 
 - A tag missing from the vocabulary is named at the foot of `/topics/`.
 - An organization missing from the registry appears under **Unclassified** at the foot of `/organizations/`.
