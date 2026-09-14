@@ -13,7 +13,7 @@ Requests are added by hand, so allow a day or two. There is nothing else you nee
 
 One message per issue, contains every story headline, with links. Nothing else is ever sent to the list, and you can leave any time by sending an 'unsubscribe' request **[here](mailto:bgupta.bio@gmail.com?subject=Remove%20me%20from%20AI-Academic%20list)**.
 
-<p style="border-left: 4px solid #b23b2e; background: #fdf2f0; color: #8a2f24; padding: 0.75em 1em; margin: 1.25em 0; border-radius: 3px;">Check your spam or bulk folder. New issue may land there the first time. Mark the message <em>not spam</em> and add <strong>ai-academic-briefing@googlegroups.com</strong> to your contacts, so later issues can arrive in your inbox.</p>
+<p style="border-left: 4px solid #b23b2e; background: #fdf2f0; color: #8a2f24; padding: 0.75em 1em; margin: 1.25em 0; border-radius: 3px;">Normally, issues should arrive in your Inbox roughly once a week. However, if any lands in your spam or bulk folder, then mark the message <em>not spam</em> and add the sender to your contacts.</p>
 
 **In a feed reader:** The feed is at **[{{ '/feed.xml' | absolute_url }}]({{ '/feed.xml' | absolute_url }})** and carries each issue in full. Use any feed reader — Feedly, Inoreader, NetNewsWire, Thunderbird.
 
