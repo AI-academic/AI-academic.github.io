@@ -16,12 +16,15 @@
 #
 # Kinds and their order on the page are set by organization_kinds in
 # _config.yml. Current item counts are on /organizations/ itself.
+
 # --- university ---
 "Arizona State University":
   kind: university
 "Bocconi University":
   kind: university
 "California State University":
+  kind: university
+"Carleton University":
   kind: university
 "Cornell University":
   kind: university
@@ -33,6 +36,8 @@
   kind: university
 "Emory University":
   kind: university
+"ÉTS":
+  kind: university
 "Fudan University":
   kind: university
 "Georgetown University":
@@ -41,13 +46,13 @@
   kind: university
 "HKUST":
   kind: university
-"MIT":
-  kind: university
 "McGill University":
   kind: university
 "McMaster University":
   kind: university
 "Michigan State University":
+  kind: university
+"MIT":
   kind: university
 "Northwestern University":
   kind: university
@@ -62,6 +67,8 @@
 "UC Berkeley":
   kind: university
 "UC Irvine":
+  kind: university
+"Université Laval":
   kind: university
 "University College London":
   kind: university
@@ -79,6 +86,8 @@
   kind: university
 "University of Iowa":
   kind: university
+"University of Maine System":
+  kind: university
 "University of Oxford":
   kind: university
 "University of Sydney":
@@ -91,13 +100,23 @@
   kind: university
 "UNSW Sydney":
   kind: university
+"UQAM":
+  kind: university
 "York University":
   kind: university
 
 # --- research ---
 "Amii":
   kind: research
+"Ankabut":
+  kind: research
 "CIFAR":
+  kind: research
+"DFKI":
+  kind: research
+"EBAiM":
+  kind: research
+"LawZero":
   kind: research
 "Mila":
   kind: research
@@ -109,7 +128,11 @@
   kind: government
 "European AI Office":
   kind: government
+"Florida Board of Governors":
+  kind: government
 "Government of Canada":
+  kind: government
+"Government of Germany":
   kind: government
 "Government of Manitoba":
   kind: government
@@ -123,13 +146,17 @@
   kind: government
 "Natural Resources Canada":
   kind: government
+"NSERC":
+  kind: government
 "State of California":
   kind: government
-"UK Research and Innovation":
+"State of Florida":
   kind: government
 "U.S. Department of Education":
   kind: government
 "UK Government":
+  kind: government
+"UK Research and Innovation":
   kind: government
 "UNESCO":
   kind: government
@@ -153,11 +180,15 @@
   kind: association
 
 # --- company ---
+"Alstom":
+  kind: company
 "Anthropic":
   kind: company
 "BoodleBox":
   kind: company
 "Cubby":
+  kind: company
+"e& UAE":
   kind: company
 "Encoura Eduventures Research":
   kind: company
@@ -179,6 +210,8 @@
   kind: company
 
 # --- publisher ---
+"Elsevier":
+  kind: publisher
 "Nature":
   kind: publisher
 "Retraction Watch":
