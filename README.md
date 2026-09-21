@@ -1,9 +1,9 @@
 # AI-academic.github.io
 
-This site hosts curated AI related news and development relevant to academic institutions.
+This site hosts curated AI related news and development relevant to academic institutions with focus on Canada.
 Contents are published at **https://ai-academic.github.io/**
 
-Each briefing consists of one or more stories and is typically published once a week. A time-sensitive news can be published sooner. Each news story is a separate file; a briefing for a given date is assembled from the stories that carry that date. That is what lets the same story appear in its briefing, under each of its topics, under each organization it concerns, and in search — without being written more than once.
+Each briefing consists of one or more stories and is typically published once a week. A time-sensitive news can be published sooner. Each news story is a separate file. A briefing for a given date is assembled from the stories that carry that date. That is what lets the same story appear in its briefing, under each of its topics, under each organization it concerns, and in search — without being written more than once.
 
 ## Publishing a briefing
 
@@ -11,7 +11,7 @@ Each briefing consists of one or more stories and is typically published once a 
 2. One wrapper post in `_posts/YYYY-MM-DD-briefing.md` — four lines, plus an introductory note if the issue needs one.
 3. If a story names an organization not yet used, add it to `_data/organizations.yml` with its kind.
 
-The front page, briefing pages, topic pages, organization pages, the search index and the RSS feed all rebuild themselves. Nothing else is edited by hand.
+The front page, briefing pages, topic pages, organization pages, the search index and the RSS feed all rebuild themselves. 
 
 ### An item file (as an example)
 
@@ -35,7 +35,7 @@ Body text, in markdown.
 
 `date` and `briefing` are separate for a reason: an issue routinely carries news from the preceding week. Topic and organization pages sort by when the news happened; briefing pages gather by when it was published.
 
-`related` is optional and reciprocal. Naming another item's slug causes both items to show a link to the other, so a pairing is recorded once and on whichever item was written second, and never has to be maintained in two places. Two related items are usually plenty; the link is for a reader who wants the earlier story, not a see-also index. 
+`related` is optional and reciprocal. Naming another item's slug causes both items to show a link to the other, so a pairing is recorded once and on whichever item was written second, and never has to be maintained in two places. Two related items are usually plenty; the link is for a reader who wants the earlier story, not a see-also index. Search can be used to find all related news. 
 
 ## What is where
 
@@ -51,11 +51,11 @@ Body text, in markdown.
 
 ## Conventions
 
-- **Tags** come from a fixed list in `TAGS.md` and `tag_vocabulary` in `_config.yml`. Two to four per item. Do not invent one mid-issue.
-- **Organizations** are the actors in a story, not every name mentioned. Copy the spelling from `_data/organizations.yml`.
-- **Sections** are `canada`, `international`, `government`, `other`, defined in `_config.yml`.
-- **Related items** are named by slug, never by title, and only in one direction. The reverse link appears on its own.
-- **Sources** go primary document first, later coverage after. A second source has to add something the first does not, and its label has to say what: "Companion release" tells a reader nothing, "Companion release: UK access to Ukraine's AI labs" tells them whether to click. One source renders inline; two or more are stacked as a list with their domains, so the label is what the reader chooses on.
+- **Tags:** These come from a fixed list in `TAGS.md` and `tag_vocabulary` in `_config.yml`. Typically two to four per item. DO NOT invent a tag mid-issue!
+- **Organizations:** These are part of a story, not every name mentioned. Copy the spelling from `_data/organizations.yml`.
+- **Sections:** These are `canada`, `international`, `government`, `other`, defined in `_config.yml`.
+- **Related items:** These items are named by slug, never by title, and only in one direction. The reverse link appears on its own.
+- **Sources:** Use primary information first, later coverage after. A second source has to add something the first does not, and its label has to say what: "Companion release" tells a reader nothing, "Companion release: UK access to Ukraine's AI labs" tells the reader whether to click. One source renders inline; two or more are stacked as a list with their domains, so the label is what the reader chooses on.
 
 ## Announcing an issue by email
 
