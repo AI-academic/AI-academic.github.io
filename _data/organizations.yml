@@ -22,6 +22,8 @@
   kind: university
 "Bocconi University":
   kind: university
+"Brown University":
+  kind: university
 "California State University":
   kind: university
 "Carleton University":
@@ -29,6 +31,8 @@
 "Cornell University":
   kind: university
 "Dalhousie University":
+  kind: university
+"Dartmouth College":
   kind: university
 "Deakin University":
   kind: university
@@ -43,6 +47,8 @@
 "Georgetown University":
   kind: university
 "Georgia Tech":
+  kind: university
+"Harvard University":
   kind: university
 "HKUST":
   kind: university
@@ -61,6 +67,8 @@
 "Princeton University":
   kind: university
 "Stanford University":
+  kind: university
+"Syracuse University":
   kind: university
 "Tsinghua University":
   kind: university
@@ -116,6 +124,8 @@
   kind: research
 "EBAiM":
   kind: research
+"HHMI Janelia Research Campus":
+  kind: research
 "LawZero":
   kind: research
 "Mila":
@@ -129,6 +139,8 @@
 "European AI Office":
   kind: government
 "Florida Board of Governors":
+  kind: government
+"Government of Alberta":
   kind: government
 "Government of Canada":
   kind: government
@@ -154,6 +166,8 @@
   kind: government
 "U.S. Department of Education":
   kind: government
+"U.S. Government":
+  kind: government
 "UK Government":
   kind: government
 "UK Research and Innovation":
@@ -178,9 +192,13 @@
   kind: association
 "Quality Matters":
   kind: association
+"University of Calgary Students' Union":
+  kind: association
 
 # --- company ---
 "Alstom":
+  kind: company
+"Andreessen Horowitz":
   kind: company
 "Anthropic":
   kind: company
@@ -194,7 +212,11 @@
   kind: company
 "Google":
   kind: company
+"Hanover Research":
+  kind: company
 "Hugging Face":
+  kind: company
+"iLands":
   kind: company
 "KPMG Canada":
   kind: company
@@ -211,6 +233,8 @@
 
 # --- publisher ---
 "Elsevier":
+  kind: publisher
+"Inside Higher Ed":
   kind: publisher
 "Nature":
   kind: publisher
