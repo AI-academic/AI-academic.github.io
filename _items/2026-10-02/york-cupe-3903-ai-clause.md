@@ -9,7 +9,7 @@ organizations:
   - "York University"
   - "CUPE 3903"
 sources:
-  - label: "Academica Top Ten, October 1: UQAM, Western, WLU and YorkU labour negotiations continue"
+  - label: "AI term in York University CUPE 3903 teaching assistants labour negotiations (Academica Top Ten, October 1)"
     url: "https://academica.ca/top_ten/october-1-2026/"
 ---
-CUPE 3903, the union representing teaching assistants and contract faculty at York University, is seeking a commitment in current bargaining that the university will not use AI tools to reduce or replace the work of human staff. Academica's roundup of labour negotiations reports the demand at York only; the same roundup covers bargaining at UQAM, Western and Wilfrid Laurier, where no AI provisions are mentioned.
+CUPE 3903, the union representing teaching assistants and contract faculty at York University, is seeking a commitment in current bargaining that the university will not use AI tools to reduce or replace the work of human staff. Academica's roundup of labour negotiations reports that this development is specific to York, and bargaining at few other universities (UQAM, Western and Wilfrid Laurier) do not include AI provisions. 
