@@ -1,5 +1,5 @@
 ---
-title: "Université de Montréal (Canada) adopts an institution-wide AI vision"
+title: "Université de Montréal adopts an institution-wide AI vision"
 date: 2026-09-30
 briefing: 2026-10-02
 slug: udem-ai-vision
