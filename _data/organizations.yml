@@ -190,13 +190,7 @@
 # --- association ---
 "Alberta Teachers' Association":
   kind: association
-"APLU":
-  kind: association
-"Coalition of Urban Serving Universities":
-  kind: association
 "CUPE 3903":
-  kind: association
-"Education Design Lab":
   kind: association
 "EDUCAUSE":
   kind: association
