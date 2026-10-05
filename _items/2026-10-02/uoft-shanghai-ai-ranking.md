@@ -12,4 +12,4 @@ sources:
   - label: "U of T ranks third globally in AI for second straight year"
     url: "https://www.utoronto.ca/news/u-t-ranks-third-globally-ai-second-straight-year-shanghairanking-consultancy"
 ---
-U of T placed third in the world for artificial intelligence in ShanghaiRanking's 2026 Global Ranking of Academic Subjects, the same position it held when the subject debuted in last year's rankings. In the university's announcement, President Melanie Woodin credits the foundations of the technology to University Professor Emeritus Geoffrey Hinton and his graduate students.
+U of T placed third in the world for artificial intelligence in ShanghaiRanking's 2026 Global Ranking of Academic Subjects, the same position it held when the subject was first introduced in last year's rankings. In the university's announcement, President Melanie Woodin credits the foundations of the technology to University Professor Emeritus Geoffrey Hinton and his graduate students.
