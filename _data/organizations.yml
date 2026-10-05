@@ -24,6 +24,8 @@
   kind: university
 "Brown University":
   kind: university
+"California Community Colleges":
+  kind: university
 "California State University":
   kind: university
 "Carleton University":
@@ -64,6 +66,8 @@
   kind: university
 "Ohio State University":
   kind: university
+"Penn State":
+  kind: university
 "Princeton University":
   kind: university
 "Stanford University":
@@ -75,6 +79,8 @@
 "UC Berkeley":
   kind: university
 "UC Irvine":
+  kind: university
+"Université de Montréal":
   kind: university
 "Université Laval":
   kind: university
@@ -102,6 +108,8 @@
   kind: university
 "University of Texas at Austin":
   kind: university
+"University of Toronto":
+  kind: university
 "University of Waterloo":
   kind: university
 "University of Wyoming":
@@ -118,6 +126,8 @@
   kind: research
 "Ankabut":
   kind: research
+"Broad Institute":
+  kind: research
 "CIFAR":
   kind: research
 "DFKI":
@@ -129,6 +139,8 @@
 "LawZero":
   kind: research
 "Mila":
+  kind: research
+"Pew Research Center":
   kind: research
 "Vector Institute":
   kind: research
@@ -178,6 +190,14 @@
 # --- association ---
 "Alberta Teachers' Association":
   kind: association
+"APLU":
+  kind: association
+"Coalition of Urban Serving Universities":
+  kind: association
+"CUPE 3903":
+  kind: association
+"Education Design Lab":
+  kind: association
 "EDUCAUSE":
   kind: association
 "Federation of Canadian Municipalities":
@@ -212,6 +232,8 @@
   kind: company
 "Google":
   kind: company
+"Google DeepMind":
+  kind: company
 "Hanover Research":
   kind: company
 "Hugging Face":
@@ -222,9 +244,13 @@
   kind: company
 "Microsoft":
   kind: company
+"Nikon":
+  kind: company
 "Nvidia":
   kind: company
 "OpenAI":
+  kind: company
+"ShanghaiRanking Consultancy":
   kind: company
 "Sony Music":
   kind: company
@@ -232,11 +258,21 @@
   kind: company
 
 # --- publisher ---
+"arXiv":
+  kind: publisher
 "Elsevier":
   kind: publisher
 "Inside Higher Ed":
   kind: publisher
 "Nature":
   kind: publisher
+"Oxford University Press":
+  kind: publisher
 "Retraction Watch":
+  kind: publisher
+"Springer Nature":
+  kind: publisher
+"University of Chicago Press":
+  kind: publisher
+"Wiley":
   kind: publisher
