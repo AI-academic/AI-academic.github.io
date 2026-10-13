@@ -13,4 +13,4 @@ sources:
   - label: "The code on GitHub"
     url: "https://github.com/AI-Safety-Institute/transect"
 ---
-The UK AI Security Institute released Transect, an open-source tool that turns a long agent-evaluation transcript into a single interactive report on a shared timeline. It uses LLM judges, chosen by the user, to label stretches of agent activity with the user's own categories, and links each label back to the transcript passage it describes. The code is on GitHub, and the accompanying paper is on arXiv (2610.08364).
+The UK AI Security Institute released Transect, an open-source tool that turns a long AI agent-evaluation transcript into a single interactive report on a shared timeline. User-selected LLM judges label stretches of agent activity with the user's own categories. The tool links each label back to its transcript descriptions. The code is on GitHub, and the accompanying paper is on arXiv (2610.08364).
