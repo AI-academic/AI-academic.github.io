@@ -21,12 +21,29 @@ layout: default
   {% if site.posts.size > 1 %}
   <h2>Earlier briefings</h2>
   <ul class="post-list">
-    {% for post in site.posts offset:1 limit:15 %}
+    {% for post in site.posts offset:1 limit:6 %}
     <li>
       <h3><a class="post-link" href="{{ post.url | relative_url }}">{% include issue-label.html post=post %}</a></h3>
     </li>
     {% endfor %}
   </ul>
   {% endif %}
+
+  {% comment %}
+    The home page shows the latest issue plus the six before it; every issue
+    is on /archive/. Translucent greys match the pill buttons on /topics/ and
+    /organizations/, so the link reads correctly on a light or dark skin.
+  {% endcomment %}
+  <style>
+    .archive-link { margin: 1.2rem 0 2rem; }
+    .archive-link a { display: inline-block; padding: .45em 1.1em; font-weight: 600;
+                      border: 1px solid rgba(128,128,128,.45); border-radius: 999px;
+                      text-decoration: none; }
+    .archive-link a:hover { background: rgba(128,128,128,.16); text-decoration: none; }
+    .archive-link .n { font-weight: 400; opacity: .6; }
+  </style>
+  <p class="archive-link">
+    <a href="{{ '/archive/' | relative_url }}">Full archive &rarr; <span class="n">all {{ site.posts.size }} briefings</span></a>
+  </p>
 
 </div>
