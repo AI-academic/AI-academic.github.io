@@ -54,6 +54,8 @@
   kind: university
 "HKUST":
   kind: university
+"Manipal Academy of Higher Education":
+  kind: university
 "McGill University":
   kind: university
 "McMaster University":
@@ -61,6 +63,8 @@
 "Michigan State University":
   kind: university
 "MIT":
+  kind: university
+"Newcastle University":
   kind: university
 "Northwestern University":
   kind: university
@@ -72,7 +76,11 @@
   kind: university
 "Stanford University":
   kind: university
+"SUNY":
+  kind: university
 "Syracuse University":
+  kind: university
+"Toronto Metropolitan University":
   kind: university
 "Tsinghua University":
   kind: university
@@ -96,13 +104,19 @@
   kind: university
 "University of Colorado":
   kind: university
+"University of Copenhagen":
+  kind: university
 "University of Delaware":
   kind: university
 "University of Iowa":
   kind: university
 "University of Maine System":
   kind: university
+"University of Minnesota":
+  kind: university
 "University of Oxford":
+  kind: university
+"University of Southampton":
   kind: university
 "University of Sydney":
   kind: university
@@ -111,6 +125,8 @@
 "University of Toronto":
   kind: university
 "University of Waterloo":
+  kind: university
+"University of Westminster":
   kind: university
 "University of Wyoming":
   kind: university
@@ -136,6 +152,10 @@
   kind: research
 "HHMI Janelia Research Campus":
   kind: research
+"Inria":
+  kind: research
+"Institute for Advanced Study":
+  kind: research
 "LawZero":
   kind: research
 "Mila":
@@ -146,9 +166,13 @@
   kind: research
 
 # --- government ---
+"AI Security Institute":
+  kind: government
 "CanNor":
   kind: government
 "European AI Office":
+  kind: government
+"European Commission":
   kind: government
 "Florida Board of Governors":
   kind: government
@@ -165,6 +189,8 @@
 "Government of South Korea":
   kind: government
 "Government of Ukraine":
+  kind: government
+"MHRA":
   kind: government
 "National Science Foundation":
   kind: government
@@ -190,6 +216,8 @@
 # --- association ---
 "Alberta Teachers' Association":
   kind: association
+"Canadian Association of Research Libraries":
+  kind: association
 "CUPE 3903":
   kind: association
 "EDUCAUSE":
@@ -211,6 +239,8 @@
 
 # --- company ---
 "Alstom":
+  kind: company
+"Amazon":
   kind: company
 "Andreessen Horowitz":
   kind: company
@@ -247,6 +277,8 @@
 "ShanghaiRanking Consultancy":
   kind: company
 "Sony Music":
+  kind: company
+"Turnitin":
   kind: company
 "Warner Chappell":
   kind: company
