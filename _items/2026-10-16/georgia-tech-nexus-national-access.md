@@ -1,5 +1,5 @@
 ---
-title: "Georgia Tech opens the NSF-funded \"Nexus\" AI supercomputer to researchers nationwide, with 90% of capacity peer-allocated"
+title: "Georgia Tech opens the NSF-funded \"Nexus\" AI supercomputer to researchers nationwide"
 date: 2026-10-12
 briefing: 2026-10-16
 slug: georgia-tech-nexus-national-access
