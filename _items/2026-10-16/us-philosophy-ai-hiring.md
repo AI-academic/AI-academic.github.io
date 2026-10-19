@@ -11,7 +11,7 @@ organizations:
   - "Georgia Tech"
   - "University of Florida"
 sources:
-  - label: "Universities have gone on an AI philosopher hiring spree (Inside Higher Ed)"
+  - label: "Universities have gone on an AI philosopher hiring spree"
     url: "https://www.insidehighered.com/news/faculty/2026/10/15/universities-have-gone-ai-philosopher-hiring-spree"
 ---
-More than a dozen US philosophy departments have announced AI-focused tenure-track searches this fall, including Purdue, the University of Illinois Chicago and Georgia Tech. The University of Florida has had an endowed chair in the philosophy of AI, held by Cameron Buckner, since 2024, and UT San Antonio filled a philosophy position in a state-funded cross-disciplinary cluster on AI and education. The trend runs against a decline in completed US philosophy PhDs, from 580 in 2011 to 477 in 2022. Brian Leiter of the University of Chicago Law School called it "a foolish waste of philosophy lines." AI is now reshaping hiring in humanities departments, not only in computing.
+More than a dozen US philosophy departments have announced AI-focused tenure-track searches this fall, including Purdue, the University of Illinois Chicago, and Georgia Tech. The University of Florida has had an endowed chair in the philosophy of AI since 2024, and UT San Antonio filled a philosophy position in a state-funded cross-disciplinary cluster on AI and education. The trend runs against a decline in completed US philosophy PhDs. Brian Leiter of the University of Chicago Law School called it "a foolish waste of philosophy lines." The news shows that AI is now reshaping hiring in humanities departments, not just in computing.
