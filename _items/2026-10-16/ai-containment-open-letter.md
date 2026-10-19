@@ -1,5 +1,5 @@
 ---
-title: "Open letter from nearly 500 scientists, including Bengio, Hinton, Papernot and Régis, calls for air-gapping cyber-capable AI models"
+title: "Open letter from scientists calls for air-gapping cyber-capable AI models"
 date: 2026-10-13
 briefing: 2026-10-16
 slug: ai-containment-open-letter
