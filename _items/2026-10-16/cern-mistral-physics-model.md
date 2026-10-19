@@ -14,4 +14,4 @@ sources:
   - label: "TimesLIVE's report, on the model's name (Flare) and the absence of a timeline or budget"
     url: "https://www.timeslive.co.za/news/sci-tech/2026-10-15-cern-and-mistral-partner-to-build-flare-a-new-ai-model-for-physics/"
 ---
-CERN and Mistral AI signed a statement of intent establishing a long-term partnership on foundation models for scientific discovery, starting with high-energy physics. The first proposal is a "Large Physics Model" pre-trained on billions of simulated Large Hadron Collider proton-proton collisions, intended to support tasks such as reconstructing collisions, identifying particles and flagging unexpected signals. No timeline or budget was disclosed.
+CERN and Mistral AI signed a statement of intent establishing a long-term partnership on foundation models for scientific discovery, starting with high-energy physics. The first proposal is a "Large Physics Model" pre-trained on billions of simulated Large Hadron Collider proton-proton collisions, intended to support tasks such as reconstructing collisions, identifying particles, and flagging unexpected signals. 
