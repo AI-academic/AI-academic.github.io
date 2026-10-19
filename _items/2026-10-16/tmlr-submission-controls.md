@@ -1,5 +1,5 @@
 ---
-title: "Machine-learning journal tightens controls after a 300% surge in submissions"
+title: "Machine-learning journal puts restrictions after a 300% surge in submissions"
 date: 2026-10-15
 briefing: 2026-10-16
 slug: tmlr-submission-controls
