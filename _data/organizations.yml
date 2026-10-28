@@ -20,6 +20,8 @@
 # --- university ---
 "Arizona State University":
   kind: university
+"Bentley University":
+  kind: university
 "Bocconi University":
   kind: university
 "Brown University":
@@ -67,6 +69,8 @@
 "MIT":
   kind: university
 "Newcastle University":
+  kind: university
+"Northeastern University":
   kind: university
 "Northwestern University":
   kind: university
@@ -158,6 +162,8 @@
   kind: university
 "Vanderbilt University":
   kind: university
+"WPI":
+  kind: university
 "York University":
   kind: university
 
@@ -188,6 +194,10 @@
   kind: research
 "National Bureau of Economic Research":
   kind: research
+"National Computational Infrastructure":
+  kind: research
+"Pawsey Supercomputing Research Centre":
+  kind: research
 "Pew Research Center":
   kind: research
 "Vector Institute":
@@ -210,6 +220,8 @@
   kind: government
 "Government of Germany":
   kind: government
+"Government of Italy":
+  kind: government
 "Government of Manitoba":
   kind: government
 "Government of New Brunswick":
@@ -221,6 +233,8 @@
 "Government of the Netherlands":
   kind: government
 "Government of Ukraine":
+  kind: government
+"Government of Uzbekistan":
   kind: government
 "MHRA":
   kind: government
@@ -252,6 +266,8 @@
   kind: association
 "Canadian Association of Research Libraries":
   kind: association
+"CEN-CENELEC":
+  kind: association
 "CUPE 3903":
   kind: association
 "EDUCAUSE":
@@ -260,15 +276,21 @@
   kind: association
 "Higher Learning Commission":
   kind: association
+"Jisc":
+  kind: association
 "Mitacs":
   kind: association
 "Next Generation Manufacturing Canada":
+  kind: association
+"Ontario Undergraduate Student Alliance":
   kind: association
 "Prosper Northwest Territories":
   kind: association
 "Quality Matters":
   kind: association
 "SAIR Foundation":
+  kind: association
+"Science and Technology Australia":
   kind: association
 "Universities of the Netherlands":
   kind: association
@@ -335,6 +357,8 @@
 "JAMA Network":
   kind: publisher
 "Nature":
+  kind: publisher
+"NEJM AI":
   kind: publisher
 "Oxford University Press":
   kind: publisher
