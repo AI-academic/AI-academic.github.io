@@ -12,4 +12,4 @@ sources:
   - label: "New Google partnership to accelerate AI adoption across HE and FE"
     url: "https://www.jisc.ac.uk/news/all/new-google-partnership-to-accelerate-ai-adoption-across-he-and-fe"
 ---
-Jisc, the UK's not-for-profit digital agency for education and research, and Google announced a two-year collaboration to help universities and colleges build AI capability through workshops, leadership engagement, practitioner communities and shared evidence. A dedicated Jisc reseller framework will offer a sector-specific route to buying Google Workspace for Education, cloud and AI services, and a first cohort of institutions will test adoption.
+Jisc (a non-profit membership organization in UK, which originally stood for Joint Information Systems Committee), and Google announced a two-year collaboration to help universities and colleges build AI capability through workshops, leadership engagement, practitioner communities and shared evidence. A dedicated Jisc reseller framework will offer a sector-specific route to buying Google Workspace for Education, cloud and AI services, and a first cohort of institutions will test adoption.
