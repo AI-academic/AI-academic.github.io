@@ -5,7 +5,7 @@ permalink: /search/
 ---
 
 <p>Search every news item published so far, including organization names and topic tags.
-Two or more letters; multiple words must all appear.</p>
+Two or more letters; multiple words must all appear. Accents and capitals don't matter.</p>
 
 <input type="search" id="q" placeholder="e.g. McMaster, integrity, funding"
        autocomplete="off" style="width:100%;padding:.6em;font-size:1rem;">
@@ -32,23 +32,47 @@ Two or more letters; multiple words must all appear.</p>
     return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
   }
 
+  // Fold text for matching: ignore case, accents (Montréal = Montreal),
+  // curly vs straight quotes (children’s = children's) and dash variants
+  // (Navier–Stokes = Navier-Stokes). Each character maps to exactly one
+  // character, so positions in the folded text line up with the original.
+  var EXTRA = { "ø": "o", "Ø": "o", "ł": "l", "Ł": "l",
+                "đ": "d", "Đ": "d", "ı": "i" };
+  function fold(s) {
+    s = String(s).normalize("NFC");
+    var out = "";
+    for (var i = 0; i < s.length; i++) {
+      var c = s.charAt(i);
+      var base = c.normalize("NFD").replace(/[̀-ͯ]/g, "");
+      out += EXTRA[c] || (base.length === 1 ? base : c);
+    }
+    return out
+      .replace(/[‐-―−]/g, "-")
+      .replace(/[‘’‚‛′]/g, "'")
+      .replace(/[“-‟″]/g, '"')
+      .toLowerCase();
+  }
+
   function snippet(text, term) {
-    var i = text.toLowerCase().indexOf(term);
+    text = String(text).normalize("NFC");
+    var i = fold(text).indexOf(term);
     if (i === -1) { return esc(text.slice(0, 180)) + "..."; }
     var start = Math.max(0, i - 90);
     return (start > 0 ? "..." : "") + esc(text.slice(start, start + 220)) + "...";
   }
 
   function run() {
-    var q = input.value.trim().toLowerCase();
+    var q = fold(input.value.trim());
     if (q.length < 2) { out.innerHTML = ""; count.textContent = ""; return; }
     var terms = q.split(/\s+/);
 
     var hits = items.filter(function (p) {
-      var hay = (p.title + " " + p.text + " " +
-                 (p.tags || []).join(" ") + " " +
-                 (p.organizations || []).join(" ")).toLowerCase();
-      return terms.every(function (t) { return hay.indexOf(t) !== -1; });
+      if (p.hay === undefined) {
+        p.hay = fold(p.title + " " + p.text + " " +
+                     (p.tags || []).join(" ") + " " +
+                     (p.organizations || []).join(" "));
+      }
+      return terms.every(function (t) { return p.hay.indexOf(t) !== -1; });
     });
 
     count.textContent = hits.length + (hits.length === 1 ? " item" : " items");
