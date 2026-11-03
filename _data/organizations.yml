@@ -84,11 +84,15 @@
   kind: university
 "Rice University":
   kind: university
+"Simon Fraser University":
+  kind: university
 "Stanford University":
   kind: university
 "SUNY":
   kind: university
 "Syracuse University":
+  kind: university
+"Technion":
   kind: university
 "Texas A&M University":
   kind: university
@@ -135,6 +139,8 @@
 "University of Manitoba":
   kind: university
 "University of Minnesota":
+  kind: university
+"University of Ottawa":
   kind: university
 "University of Oxford":
   kind: university
@@ -206,7 +212,11 @@
 # --- government ---
 "AI Security Institute":
   kind: government
+"Canada Foundation for Innovation":
+  kind: government
 "CanNor":
+  kind: government
+"CIHR":
   kind: government
 "European AI Office":
   kind: government
@@ -244,11 +254,19 @@
   kind: government
 "NSERC":
   kind: government
+"Office of the Privacy Commissioner of Canada":
+  kind: government
+"PrairiesCan":
+  kind: government
 "Research Manitoba":
+  kind: government
+"SSHRC":
   kind: government
 "State of California":
   kind: government
 "State of Florida":
+  kind: government
+"Statistics Canada":
   kind: government
 "U.S. Department of Education":
   kind: government
@@ -267,6 +285,8 @@
 "Canadian Association of Research Libraries":
   kind: association
 "CEN-CENELEC":
+  kind: association
+"Council of Ontario Universities":
   kind: association
 "CUPE 3903":
   kind: association
