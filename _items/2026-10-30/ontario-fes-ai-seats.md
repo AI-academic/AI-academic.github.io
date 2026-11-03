@@ -19,5 +19,3 @@ sources:
     url: "https://ontariosuniversities.ca/news/cou-statement-response-to-fall-economic-statement-2026/"
 ---
 Ontario's 2026 Economic Outlook and Fiscal Review, released on 29 October, says the province is investing $1.7 billion to support 70,000 additional postsecondary seats in high-demand fields, including AI. The seat funding is part of a $6.4 billion postsecondary commitment announced earlier this year. The statement also says Ontario is developing an **AI Industrial Strategy** covering commercialization, digital sovereignty, computing and energy infrastructure, workforce skills and responsible use, and it cites $30 million for the Vector Institute. The Council of Ontario Universities responded the same day, calling universities "critical partners" in building AI talent and accelerating AI commercialization.
-
-The AI Industrial Strategy is named but not published. Its funding, and whether that money routes through institutions or through firms, is the key open provincial question for universities.
