@@ -126,7 +126,7 @@ def bodies(issue, note, stories, url, subject):
     html.append(
         f"<p style='margin-top:1.5em'><a href='{url}'>Read the issue on the site</a>"
         f" &middot; <a href='{SITE_URL}/archive/'>all issues</a>"
-        f" &middot; <a href='{SITE_URL}/feed.xml'>RSS</a></p>"
+        f" &middot; <a href='{SITE_URL}/rss/'>RSS</a></p>"
     )
     return "\n".join(text), "\n".join(html)
 
