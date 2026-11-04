@@ -15,8 +15,12 @@ layout: null
     - every relative link is rewritten to an absolute one, because a feed is
       read away from this site.
 
-  jekyll-feed still runs, at /summary.xml (see _config.yml), because the theme's
-  head calls its feed_meta tag.
+  jekyll-feed still runs, at /summary.xml (see _config.yml), so anyone already
+  subscribed there keeps working. Nothing on the site links to it any more.
+
+  The feed carries the 10 newest issues; older ones stay on the Archive page.
+  Change the limit on the for loop below to carry more or fewer. People reach
+  this address through the page at /rss/ (rss.html), not by reading it here.
 {%- endcomment -%}
 {%- assign prefix = 'href="' | append: site.url | append: '/' -%}
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -27,7 +31,7 @@ layout: null
   <link href="{{ site.url }}/" rel="alternate" type="text/html" />
   <updated>{{ site.posts.first.date | date_to_xmlschema }}</updated>
   <generator uri="https://jekyllrb.com/">Jekyll</generator>
-{% for post in site.posts limit: 20 %}
+{% for post in site.posts limit: 10 %}
   {%- capture label %}{% include issue-label.html post=post %}{% endcapture -%}
   {%- capture body %}{{ post.content }}{% include briefing-body.html post=post %}{% endcapture -%}
   {%- assign safe = body | replace: 'href="/', prefix | replace: ']]>', ']]&gt;' -%}

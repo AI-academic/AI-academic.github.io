@@ -1,0 +1,17 @@
+{%- comment -%}
+  The theme's head, unchanged except for one line. The theme calls jekyll-feed's
+  feed_meta tag there, which would advertise the summary-only /summary.xml, so a
+  reader given the home page address would subscribe to a feed with no stories.
+  This points browsers and feed readers at the full /feed.xml instead.
+{%- endcomment -%}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link type="application/atom+xml" rel="alternate" href="{{ "/feed.xml" | absolute_url }}" title="{{ site.title | escape }}">
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>

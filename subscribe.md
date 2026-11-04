@@ -15,7 +15,7 @@ One message per issue, contains every story headline, with links. Nothing else i
 
 <p style="border-left: 4px solid #b23b2e; background: #fdf2f0; color: #8a2f24; padding: 0.75em 1em; margin: 1.25em 0; border-radius: 3px;">Normally, issues should arrive in your Inbox roughly once a week on Sunday or Monday. However, if any lands in your spam or bulk folder, then mark the message <em>not spam</em> and add the sender to your contacts.</p>
 
-**In a feed reader:** The feed is at **[{{ '/feed.xml' | absolute_url }}]({{ '/feed.xml' | absolute_url }})** and carries each issue in full. Use any feed reader — Feedly, Inoreader, NetNewsWire, Thunderbird.
+**In a feed reader:** The feed address is `{{ '/feed.xml' | absolute_url }}` and it carries each issue in full. Copy it into any feed reader — Feedly, Inoreader, NetNewsWire, Thunderbird. The [RSS page]({{ '/rss/' | relative_url }}) has the address and the latest issues.
 
 **By email, without joining the list:** If you would rather not be on a list, a feed-to-email service will mail you the feed directly. [Blogtrottr](https://blogtrottr.com/) is the straightforward one to try.
 

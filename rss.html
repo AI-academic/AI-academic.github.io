@@ -1,0 +1,28 @@
+---
+layout: page
+title: RSS feed
+permalink: /rss/
+---
+<style>
+  .feed-address { display: block; margin: 0 0 15px; padding: 10px 12px;
+                  overflow-wrap: anywhere; user-select: all; }
+  .issue-note { margin: 2px 0 0; color: #5f5f5f; }
+</style>
+
+<p>Feed readers use the address below to deliver each new issue in full. To subscribe, copy it into a reader such as Feedly, Inoreader, NetNewsWire or Thunderbird.</p>
+
+<code class="feed-address">{{ '/feed.xml' | absolute_url }}</code>
+
+<p>To follow by email instead, see <a href="{{ '/subscribe/' | relative_url }}">Subscribe</a>.</p>
+
+<h2>Latest issues</h2>
+<ul class="post-list">
+  {% for post in site.posts limit: 10 %}
+  <li>
+    <a class="post-link" href="{{ post.url | relative_url }}">{% include issue-label.html post=post %}</a>
+    <p class="issue-note">{{ post.content | strip_html | strip }}</p>
+  </li>
+  {% endfor %}
+</ul>
+
+<p>Older issues are in the <a href="{{ '/archive/' | relative_url }}">Archive</a>.</p>
