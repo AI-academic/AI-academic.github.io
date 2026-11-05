@@ -10,6 +10,7 @@ Each briefing consists of one or more stories and is typically published once a 
 1. One file per story in `_items/YYYY-MM-DD/`, where the folder is the date of the briefing.
 2. One wrapper post in `_posts/YYYY-MM-DD-briefing.md` — four lines, plus an introductory note if the issue needs one.
 3. If a story names an organization not yet used, add it to `_data/organizations.yml` with its kind.
+4. To introduce the issue on the Archive page, add an entry for its date to `_data/archive_intros.yml`, naming some of its headlines. Without an entry, the Archive shows only the issue's link.
 
 The front page, briefing pages, topic pages, organization pages, the search index and the RSS feed all rebuild themselves. 
 
