@@ -16,7 +16,7 @@ permalink: /archive/
   .issue-link { font-weight: 600; }
 </style>
 
-<p>Issues are organized with newest first, and each having a short introduction If you are looking for a subject rather than an issue, then <a href="{{ '/search/' | relative_url }}">Search</a> every story, browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>, or choose a topic.</p>
+<p>Issues are organized with newest first, and each having a short introduction. If you are looking for a subject rather than an issue, then <a href="{{ '/search/' | relative_url }}">search</a> every story, browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>, or choose a topic below.</p>
 
 {% comment %} The same topics and counts as the jump bar on /topics/. {% endcomment %}
 <nav class="jump-nav">
