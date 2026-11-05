@@ -16,7 +16,7 @@ permalink: /archive/
   .issue-link { font-weight: 600; }
 </style>
 
-<p>Every issue, newest first, with a short introduction to each. Looking for a subject rather than an issue? <a href="{{ '/search/' | relative_url }}">Search</a> every story, browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>, or choose a topic.</p>
+<p>Issues are organized with newest first, and each having a short introduction If you are looking for a subject rather than an issue, then <a href="{{ '/search/' | relative_url }}">Search</a> every story, browse <a href="{{ '/organizations/' | relative_url }}">by organization</a>, or choose a topic.</p>
 
 {% comment %} The same topics and counts as the jump bar on /topics/. {% endcomment %}
 <nav class="jump-nav">
@@ -32,8 +32,7 @@ permalink: /archive/
 </nav>
 
 {% comment %}
-  Issues are grouped by month, in sections that open and close on a click with
-  no script involved. Only the newest month starts open. The introductions come
+  Issues are grouped by month, in sections that open and close on a click. Only the newest month starts open. The introductions come
   from _data/archive_intros.yml, which only this page reads.
 {% endcomment %}
 {% assign current_month = "" %}
