@@ -68,6 +68,8 @@
   kind: university
 "MIT":
   kind: university
+"Nanyang Technological University":
+  kind: university
 "Newcastle University":
   kind: university
 "Northeastern University":
@@ -117,6 +119,8 @@
 "University of Auckland":
   kind: university
 "University of British Columbia":
+  kind: university
+"University of Calicut":
   kind: university
 "University of Chicago":
   kind: university
@@ -218,6 +222,8 @@
   kind: government
 "CIHR":
   kind: government
+"East African Community":
+  kind: government
 "European AI Office":
   kind: government
 "European Commission":
@@ -245,6 +251,8 @@
 "Government of Ukraine":
   kind: government
 "Government of Uzbekistan":
+  kind: government
+"Inter-University Council for East Africa":
   kind: government
 "MHRA":
   kind: government
@@ -296,6 +304,8 @@
   kind: association
 "Higher Learning Commission":
   kind: association
+"Irish Federation of University Teachers":
+  kind: association
 "Jisc":
   kind: association
 "Mitacs":
@@ -312,6 +322,8 @@
   kind: association
 "Science and Technology Australia":
   kind: association
+"Teachers' Union of Ireland":
+  kind: association
 "Universities of the Netherlands":
   kind: association
 "University of Calgary Students' Union":
@@ -327,6 +339,8 @@
 "Anthropic":
   kind: company
 "BoodleBox":
+  kind: company
+"Cashmere":
   kind: company
 "Cohere":
   kind: company
@@ -364,11 +378,17 @@
   kind: company
 "Turnitin":
   kind: company
+"Universum":
+  kind: company
 "Warner Chappell":
+  kind: company
+"XSci":
   kind: company
 
 # --- publisher ---
 "arXiv":
+  kind: publisher
+"Cambridge University Press":
   kind: publisher
 "Elsevier":
   kind: publisher
@@ -376,11 +396,15 @@
   kind: publisher
 "JAMA Network":
   kind: publisher
+"Johns Hopkins University Press":
+  kind: publisher
 "Nature":
   kind: publisher
 "NEJM AI":
   kind: publisher
 "Oxford University Press":
+  kind: publisher
+"Princeton University Press":
   kind: publisher
 "Retraction Watch":
   kind: publisher
