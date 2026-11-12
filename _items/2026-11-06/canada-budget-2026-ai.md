@@ -1,5 +1,5 @@
 ---
-title: "Canada's Budget 2026 promises \"trusted AI agents\" for every post-secondary student, with details and costs still to come"
+title: "Canada's Budget 2026 promises trusted AI agents for every post-secondary student"
 date: 2026-11-05
 briefing: 2026-11-06
 slug: canada-budget-2026-ai
@@ -14,4 +14,4 @@ sources:
   - label: "University Affairs, on how little of the budget reaches post-secondary education"
     url: "https://universityaffairs.ca/news/budget-2026-provides-small-investment-in-post-secondary-sector/"
 ---
-Budget 2026, tabled on 5 November, says the government is working to give all students at Canadian universities, colleges and CEGEPs access to "trusted AI agents," with details promised before the end of 2026 and no dollar figure attached. The government also says it will work to raise research commercialization and technology transfer from post-secondary institutions, including changes at the federal granting councils. Several of the budget's larger AI items restate commitments announced since September: $162 million for 10,000 Mitacs AI work placements, up to $1.6 billion in equity for Cohere, and $150 million for the AI safety non-profit LawZero. University Affairs judged the budget's overall investment in post-secondary education small.
+Canada's Budget 2026, tabled on 5 November, says the government is working to give all students at Canadian universities, colleges, and CEGEPs access to "trusted AI agents," with details promised before the end of 2026 and no dollar figure provided. The government also says it will work to raise research commercialization and technology transfer from post-secondary institutions, including changes at the federal granting councils. Several of the budget's larger AI items restate commitments announced since September: $162 million for 10,000 Mitacs AI work placements, up to $1.6 billion in equity for Cohere, and $150 million for the AI safety non-profit LawZero. According to University Affairs the budget's overall investment in post-secondary education small.
