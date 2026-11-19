@@ -1,5 +1,5 @@
 ---
-title: "Google extends its free Gemini educator training programm to four more countries and sub-Saharan Africa, with university credit routes"
+title: "Google extends its free Gemini educator training program to four more countries and sub-Saharan Africa, with university credit routes"
 date: 2026-11-12
 briefing: 2026-11-13
 slug: google-ai-educator-series-expansion
