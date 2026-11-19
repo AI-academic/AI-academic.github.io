@@ -32,6 +32,8 @@
   kind: university
 "Carleton University":
   kind: university
+"Concordia University":
+  kind: university
 "Cornell University":
   kind: university
 "Dalhousie University":
@@ -55,6 +57,8 @@
 "Harvard University":
   kind: university
 "HKUST":
+  kind: university
+"La Trobe University":
   kind: university
 "Leiden University":
   kind: university
@@ -148,6 +152,8 @@
   kind: university
 "University of Oxford":
   kind: university
+"University of Pennsylvania":
+  kind: university
 "University of Southampton":
   kind: university
 "University of Sydney":
@@ -232,6 +238,8 @@
   kind: government
 "Government of Alberta":
   kind: government
+"Government of Australia":
+  kind: government
 "Government of Canada":
   kind: government
 "Government of Germany":
@@ -262,6 +270,8 @@
   kind: government
 "NSERC":
   kind: government
+"Office for Students":
+  kind: government
 "Office of the Privacy Commissioner of Canada":
   kind: government
 "PrairiesCan":
@@ -288,13 +298,19 @@
   kind: government
 
 # --- association ---
+"Advance HE":
+  kind: association
 "Alberta Teachers' Association":
+  kind: association
+"Association of University Presses":
   kind: association
 "Canadian Association of Research Libraries":
   kind: association
 "CEN-CENELEC":
   kind: association
 "Council of Ontario Universities":
+  kind: association
+"COUNTER Metrics":
   kind: association
 "CUPE 3903":
   kind: association
@@ -387,6 +403,8 @@
 
 # --- publisher ---
 "arXiv":
+  kind: publisher
+"Bristol University Press":
   kind: publisher
 "Cambridge University Press":
   kind: publisher
