@@ -8,6 +8,7 @@ composes it, and the story list comes from the item files themselves.
 Standard library only -- no packages to install and nothing to keep updated.
 """
 
+from html import escape
 import os
 import re
 import smtplib
@@ -61,8 +62,23 @@ def sections():
 
 
 def field(text, name):
+    """One front-matter value, read the way YAML reads it.
+
+    A double-quoted value has its outer quotes removed and its escapes undone,
+    so a title written as "... \\"AI is not yet paying its way\\"" comes out with
+    plain quotation marks. A single-quoted value has its outer quotes removed
+    and '' turned back into '. Anything else is returned as written.
+    """
     m = re.search(rf'(?m)^{name}: (.+)$', text)
-    return m.group(1).strip().strip('"') if m else ""
+    if not m:
+        return ""
+    value = m.group(1).strip()
+    if len(value) >= 2 and value[0] == value[-1] == '"':
+        escapes = {"n": "\n", "t": "\t"}
+        return re.sub(r'\\(.)', lambda e: escapes.get(e.group(1), e.group(1)), value[1:-1])
+    if len(value) >= 2 and value[0] == value[-1] == "'":
+        return value[1:-1].replace("''", "'")
+    return value
 
 
 def gather(issue):
@@ -72,12 +88,19 @@ def gather(issue):
         sys.exit(f"No post file for {issue}; nothing to announce.")
     note = post.read_text(encoding="utf-8").split("---", 2)[2].strip()
 
-    stories = {}
+    # Within each section, stories run in the order the briefing page shows them:
+    # newest date first, and stories sharing a date in reverse order of file name
+    # (what _includes/briefing-body.html's `sort: "date" | reverse` produces).
+    rows = []
     for path in sorted((ROOT / "_items" / issue).glob("*.md")) if (ROOT / "_items" / issue).is_dir() else []:
         front = path.read_text(encoding="utf-8").split("---", 2)[1]
-        stories.setdefault(field(front, "section"), []).append(
-            (field(front, "title"), field(front, "slug") or path.stem)
-        )
+        rows.append((field(front, "date"), path.name, field(front, "section"),
+                     field(front, "title"), field(front, "slug") or path.stem))
+    rows.sort(key=lambda r: (r[0], r[1]), reverse=True)
+
+    stories = {}
+    for _date, _name, section, title, slug in rows:
+        stories.setdefault(section, []).append((title, slug))
     return note, stories
 
 
@@ -119,7 +142,7 @@ def bodies(issue, note, stories, url, subject):
         html.append(f"<h3 style='margin:1.2em 0 .3em'>{heading}</h3><ul>")
         for title, slug in rows:
             text.append(f"  - {title}")
-            html.append(f"<li><a href='{url}#{slug}'>{title}</a></li>")
+            html.append(f"<li><a href='{url}#{slug}'>{escape(title)}</a></li>")
         html.append("</ul>")
 
     text += ["", f"Read the issue: {url}", "", f"All issues: {SITE_URL}/archive/"]
