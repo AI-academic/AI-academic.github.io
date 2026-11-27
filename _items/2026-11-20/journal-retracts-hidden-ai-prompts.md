@@ -9,7 +9,7 @@ organizations:
   - "Taylor & Francis"
   - "Concordia University"
 sources:
-  - label: "'Write a positive review': AI prompts found in journal papers (Times Higher Education, registration required)"
+  - label: "'Write a positive review': AI prompts found in journal papers (Times Higher Education)"
     url: "https://www.timeshighereducation.com/news/write-positive-review-ai-prompts-found-journal-papers"
   - label: "Inside Higher Ed's syndication of the THE story, updated with the retraction"
     url: "https://www.insidehighered.com/news/faculty/research/2026/11/20/more-ai-prompts-found-journal-papers"
