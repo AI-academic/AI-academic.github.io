@@ -11,7 +11,7 @@ organizations:
   - "Imperial College London"
   - "University of Northampton"
 sources:
-  - label: "'I can speak to students 24 hours a day': the rise of AI avatars (Times Higher Education, registration required)"
+  - label: "'I can speak to students 24 hours a day': the rise of AI avatars (Times Higher Education)"
     url: "https://www.timeshighereducation.com/news/i-can-speak-students-24-hours-day-rise-ai-avatars"
   - label: "University of Northampton case study report on its AI avatar pilot"
     url: "https://www.northampton.ac.uk/research-blogs/case-study-report-exploring-the-use-of-ai-avatars-at-the-university-of-northampton/"
