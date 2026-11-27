@@ -32,6 +32,8 @@
   kind: university
 "Carleton University":
   kind: university
+"Columbia University":
+  kind: university
 "Concordia University":
   kind: university
 "Cornell University":
@@ -57,6 +59,8 @@
 "Harvard University":
   kind: university
 "HKUST":
+  kind: university
+"Imperial College London":
   kind: university
 "La Trobe University":
   kind: university
@@ -122,6 +126,8 @@
   kind: university
 "University of Auckland":
   kind: university
+"University of Bath":
+  kind: university
 "University of British Columbia":
   kind: university
 "University of Calicut":
@@ -148,6 +154,8 @@
   kind: university
 "University of Minnesota":
   kind: university
+"University of Northampton":
+  kind: university
 "University of Ottawa":
   kind: university
 "University of Oxford":
@@ -161,6 +169,8 @@
 "University of Texas at Austin":
   kind: university
 "University of Toronto":
+  kind: university
+"University of Warsaw":
   kind: university
 "University of Washington":
   kind: university
@@ -187,6 +197,8 @@
 "Amii":
   kind: research
 "Ankabut":
+  kind: research
+"Boston Children's Hospital":
   kind: research
 "Broad Institute":
   kind: research
@@ -227,6 +239,8 @@
 "CanNor":
   kind: government
 "CIHR":
+  kind: government
+"Council of the European Union":
   kind: government
 "East African Community":
   kind: government
@@ -366,6 +380,8 @@
   kind: company
 "Encoura Eduventures Research":
   kind: company
+"Gallup":
+  kind: company
 "Google":
   kind: company
 "Google DeepMind":
@@ -427,6 +443,8 @@
 "Retraction Watch":
   kind: publisher
 "Springer Nature":
+  kind: publisher
+"Taylor & Francis":
   kind: publisher
 "Transactions on Machine Learning Research":
   kind: publisher
